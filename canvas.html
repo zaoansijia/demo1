@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #xycoordiv{
+            position: absolute;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+        }
+        #img1{
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+<img id="img1" src="image/img1.jpg"/>
+<div style="text-align:center" id="coordiv" onmousemove="getCoordinates(event)" onmouseout="clearCoordinates()">
+    <canvas id="my_canvas" width="1200" height="600" style="border:1px solid #000;" >
+    </canvas>
+    <div id="xycoordiv"></div>
+</div>
+</body>
+    <script>
+        var myCanvas=document.getElementById('my_canvas');
+        var xy_coor=document.getElementById('xycoordiv');
+        var coor_x=myCanvas.offsetLeft;
+        var coor_y=myCanvas.offsetTop;
+        function getCoordinates(e){
+            x= e.clientX;
+            y= e.clientY;
+            final_x=x-coor_x;
+            final_y=y-coor_y;
+            xy_coor.innerHTML="coordinates:("+final_x+","+final_y+")";
+            xy_coor.style.marginLeft=x+"px";
+            xy_coor.style.marginTop=y+"px";
+        }
+        function clearCoordinates(){
+            xy_coor.innerHTML="";
+        }
+        var c=document.getElementById('my_canvas');
+        var cxt= c.getContext('2d');
+        cxt.fillStyle="#f00";
+        //正方形
+        cxt.fillRect(10,0,50,50);//前两个值是坐标值，后两个值是宽和高
+        //绘制线
+        cxt.moveTo(150,5);//开始点
+        cxt.lineTo(100,50);
+        cxt.lineTo(250,50);
+        cxt.stroke();//stroke()绘制已定义的路径
+        //绘制圆
+        cxt.beginPath(0);//起始一条路径，或重置当前路径；
+        cxt.fillStyle="#000";//绘制style；
+        cxt.arc(220,145,50,0,2*Math.PI);//分别代表x坐标，y坐标，半径，起始角度，完结角度；
+        cxt.closePath();
+        cxt.fill();
+        //绘制渐变色
+        cxt.beginPath();
+        var grd=cxt.createLinearGradient(175,250,380,300);//渐变开始点的x坐标，y坐标，结束点的x坐标，y坐标；
+        grd.addColorStop(0,"#FF0000");
+        grd.addColorStop(1,"#00FF00");
+        cxt.fillStyle=grd;
+        cxt.closePath();
+        cxt.fillRect(175,250,200,50);
+        //星星；
+        cxt.beginPath();
+        cxt.moveTo(20,80);
+        cxt.lineTo(80,80);
+        cxt.lineTo(20,140);
+        cxt.lineTo(50,50);
+        cxt.lineTo(80,140);
+        cxt.lineTo(20,80);
+        cxt.closePath();
+        cxt.stroke();
+        //画一个顶唠嗑
+        cxt.beginPath();//起始一条路径，或重置当前路径；
+        cxt.lineWidth=3;
+        cxt.arc(250,400,50,0,2*Math.PI);//分别代表x坐标，y坐标，半径，起始角度，完结角度；
+        cxt.moveTo(240,360);
+        cxt.lineTo(260,360);
+        cxt.moveTo(235,370);
+        cxt.lineTo(265,370);
+        cxt.moveTo(230,380);
+        cxt.lineTo(270,380);
+        cxt.stroke();
+        cxt.beginPath();//起始一条路径，或重置当前路径；
+        cxt.strokeStyle='red';
+        cxt.arc(225,400,8,0,2*Math.PI);//分别代表x坐标，y坐标，半径，起始角度，完结角度；
+        cxt.stroke();
+        cxt.beginPath();//起始一条路径，或重置当前路径；
+        cxt.arc(270,400,8,0,2*Math.PI);//分别代表x坐标，y坐标，半径，起始角度，完结角度；
+        cxt.closePath();
+        cxt.stroke();
+        cxt.beginPath();
+        cxt.strokeStyle='#00f';
+        cxt.moveTo(235,420);
+        cxt.lineTo(260,420);
+        cxt.moveTo(250,420);
+        cxt.lineTo(250,440);
+        cxt.moveTo(250,440);
+        cxt.lineTo(240,430);
+        cxt.moveTo(250,450);
+        cxt.lineTo(250,540);
+        cxt.moveTo(225,480);
+        cxt.lineTo(250,450);
+        cxt.lineTo(275,480);
+        cxt.moveTo(225,510);
+        cxt.lineTo(250,480);
+        cxt.lineTo(275,510);
+        cxt.stroke();//起始一条路径，或重置当前路径；
+        //透明
+        cxt.fillStyle="red";
+        cxt.fillRect(340,30,40,40);
+        cxt.globalAlpha=0.2;
+        cxt.fillStyle='blue';
+        cxt.fillRect(360,50,40,40);
+        cxt.fillStyle="green";
+        cxt.fillRect(380,70,40,40);
+        //渐变文字
+        cxt.beginPath();
+        cxt.globalAlpha=1;
+        cxt.font="30px Verdata";
+        var gradient=cxt.createLinearGradient(500,70,700,70);
+        gradient.addColorStop("0","magenta");
+        gradient.addColorStop("0.5","blue");
+        gradient.addColorStop("1.0","red");
+        // Fill with gradient
+        cxt.strokeStyle=gradient;
+        cxt.strokeText("Can you smile?",500,70);
+        //createPattern()方法()
+//        cxt.beginPath();
+//        var img=document.getElementById('img1');
+//        var pat=cxt.createPattern(img,'repeat');
+//        cxt.rect(570,230,200,200);
+//        cxt.fillStyle=pat;
+//        cxt.fill();
+        //放射形状
+        var fs=cxt.createRadialGradient(680,350,5,680,350,100);
+        cxt.beginPath();
+
+        fs.addColorStop(0,"#f2dede");
+        fs.addColorStop(0.2,"#bce8f1");
+        fs.addColorStop(0.4,"#d6e9c6");
+        fs.addColorStop(0.6,"#faebcc");
+        fs.addColorStop(0.8,"#72b8f2");
+        fs.addColorStop(1,"#fff");
+
+        // Fill with gradient
+        cxt.fillStyle=fs;
+        cxt.arc(680,350,100,0,2*Math.PI);//分别代表x坐标，y坐标，半径，起始角度，完结角度；
+        cxt.fill();
+        cxt.closePath();
+        //三种不同的线帽
+        cxt.beginPath();
+        cxt.lineWidth=10;
+        cxt.lineCap="butt";
+        cxt.moveTo(800,45);
+        cxt.lineTo(900,45);
+        cxt.stroke();
+
+        cxt.beginPath();
+        cxt.lineCap="round";
+        cxt.moveTo(800,60);
+        cxt.lineTo(900,60);
+        cxt.stroke();
+
+        cxt.beginPath();
+        cxt.lineCap="square";
+        cxt.moveTo(800,80);
+        cxt.lineTo(900,80);
+        cxt.stroke();
+
+        cxt.beginPath();
+        cxt.lineWidth=30;
+        //        cxt.lineJoin="square";//方形
+        //        cxt.lineJoin="round";//圆
+        cxt.miterLimit=1;
+        cxt.lineJoin="miter";
+        cxt.moveTo(800,100);
+        cxt.lineTo(870,150);
+        cxt.lineTo(810,180);
+        cxt.stroke();
+        //transform
+        cxt.beginPath();
+        cxt.fillStyle="yellow";
+        cxt.fillRect(900,0,100,20);
+
+        cxt.transform(1,0.05,-0.1,1,0,-30);
+        cxt.fillStyle="red";
+        cxt.fillRect(900,0,100,20);
+
+        cxt.transform(1,0.05,-0.1,1,0,0);
+        c.fillStyle="blue";
+        cxt.fillRect(900,0,100,20);
+
+
+    </script>
+</html>

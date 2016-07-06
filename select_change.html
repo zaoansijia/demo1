@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("select").change(function(){
+                var x=Number($(this).find("option:selected").val());
+                $(".a").find("div").hide().eq(x).show();
+            })
+        })
+    </script>
+    <title></title>
+</head>
+<body>
+<div class="1">
+    <select >
+        <option value="0">手机</option>
+        <option value="1">邮箱</option>
+        <option value="2">电话</option>
+    </select>
+</div>
+
+
+<div class="a">
+    <div>手机</div>
+    <div style="display: none;">邮箱</div>
+    <div style="display: none;">电话</div>
+</div>
+</body>
+</html>

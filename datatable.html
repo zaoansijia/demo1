@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>datatable的应用</title>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/datatable.css"/>
+</head>
+<body>
+<table id="dd" class="display" cellspacing="0" width="100%">
+    <thead>
+    <tr class="header">
+        <th>Name</th>
+        <th>Position</th>
+        <th>Office</th>
+        <th>Age</th>
+        <th>Start date</th>
+        <th>Salary</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Tiger Nixon</td>
+        <td>System Architect</td>
+        <td>Edinburgh</td>
+        <td>61</td>
+        <td>2011/04/25</td>
+        <td>$320,800</td>
+    </tr>
+    <tr>
+        <td>Tiger Nixon</td>
+        <td>System Architect</td>
+        <td>Edinburgh</td>
+        <td>61</td>
+        <td>2011/04/25</td>
+        <td>$320,800</td>
+    </tr>
+    </tbody>
+</table>
+<script>
+    $(document).ready(function() {
+        $('#dd').DataTable({
+            "paging":   true,
+            "ordering": true,
+            "info":     true
+        });
+    } );
+</script>
+</body>
+</html>

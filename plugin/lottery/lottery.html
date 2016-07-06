@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<div id="outer"></div>
+<div>
+    <a href="" style="border:1px solid #ddd">抽奖</a>
+</div>
+<script>
+    var lotteries=[{"id":1, "name":'notebook'},{"id":2, "name":'glasses'},{"id":3, "name":'pencil'},{"id":4, "name":'book'},{"id":5, "name":'sorry'}];
+    (function($){
+        var methods={
+            option:{
+                color:'red',
+                size:'14'
+            },
+            init:function(option){
+                this.option = $.extend( {}, $.fn.lottery.defaults, option );
+                console.log(option);
+                var out='';
+                for(var i=0;i<option.mydata.length;i++){
+                    var color=option.color;
+                    out+="<div id="+option.mydata[i].id+" style='background-color:"+option.color+";border:1px solid #ddd;width:100px;height:100px;'>";
+                    out+=option.mydata[i].name;
+                    out+='</div>'
+                }
+                $('#outer').html(out);
+                $('#outer').data('lottery', option);
+                //this.startlotter();
+
+            },
+            getorder:function(data){
+                var myData=$('#outer').data('lottery');
+                console.log(myData);
+            },
+            startlotter:function(data){
+
+            }
+        };
+        $.fn.lottery=function(methodOrOptions){
+            var args=Array.apply(null, arguments),
+                opts,
+                    value,
+                mylottery;
+            this.each(function(){
+                if(methods[methodOrOptions]){
+                    //mylottery = $(this).data('lottery');
+                    //console.log(mylottery)
+                    value=methods[methodOrOptions].apply(this,Array.prototype.slice.call(arguments,1));
+                    console.log(value)
+                }
+                else if(typeof  methodOrOptions==='object'||!methodOrOptions){
+                    //Default to "init"
+                    opts = args.length === 0 ? {} : $.extend({}, args[0]);
+                    opts.element = $(this);
+                    methods.init(opts);
+                }
+                else{
+                    $.error('Method'+methodOrOptions+'does not exist on jquery.lottery');
+                }
+            })
+            return (value === undefined) ? this : value;
+
+        };
+        $.fn.lottery.defaults = {
+        };
+    }(jQuery));
+//    $('a').lottery({mydata:lotteries});
+//    $('a').lottery('getorder',lotteries)
+    $('#outer').lottery({
+        mydata:lotteries,
+        color:'red',
+        size:'12'
+    });
+   $('#1').lottery('getorder');
+    $('a').on('click',function(){
+        
+    })
+
+</script>
+</body>
+</html>

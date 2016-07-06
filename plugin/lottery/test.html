@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var func=new function(){this.a="func"}
+    var myfunc=function(x){
+        var a="myfunc";
+        console.log(this.a);
+        console.log('x'+x);
+    }
+    myfunc.call(func,"var");
+    var listHTML = list("u", "One", "Two", "Three");
+    function list(type) {
+        var result = "<" + type + "l><li>";
+       // var args = Array.prototype.slice.call(arguments, 0);
+        var args = (arguments.length === 1 ? [arguments[0]] : Array.apply(null, arguments))
+        var args1 = Array.from(arguments);
+//        var args2 = [...arguments];
+        console.log('args');
+        console.log(args);
+        console.log(Array.from(arguments));
+//        console.log(...arguments)
+        result += args.join("</li><li>");
+        result += "</li></" + type + "l>"; // end list
+        return result;
+    }
+    console.log('listHtml')
+    console.log(listHTML);
+</script>
+</body>
+</html>

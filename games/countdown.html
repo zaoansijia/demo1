@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
+    <style>
+        .container{
+            background-color: lightgrey;
+            padding-top:150px;
+            min-height: 500px;
+            text-align: center;
+            border-top:10px solid #565757;
+            border-bottom: 10px solid #565757;
+        }
+        .sets span{
+            background: #EEE url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAHklEQVQImWNkYGBgYGD4//8/A5wF5SBYyAr+//8PAPOCFO0Q2zq7AAAAAElFTkSuQmCC) repeat;
+            text-shadow: 5px -5px black, 4px -4px white;
+            font-weight: bold;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        }
+        .sets input{
+            width:100px;
+            height: 50px;
+            text-align: center;
+            margin-right: 10px;
+            margin-left:10px;
+            font-size: 22px;
+            color: transparent;
+            background-color : black;
+            text-shadow : rgba(255,255,255,0.5) 0 5px 6px, rgba(255,255,255,0.2) 1px 3px 3px;
+            -webkit-background-clip : text;
+        }
+        .sets button{
+            width: 100px;
+            line-height: 50px;
+            text-align: center;
+            font-weight: bold;
+            font-size:16px;
+            color: #fff;
+            text-shadow:1px 1px 1px #333;
+            border-radius: 5px;
+            overflow: hidden;
+            border:1px solid #333;
+            box-shadow: 0 1px 2px #8b8b8b inset,0 -1px 0 #3d3d3d inset,0 -2px 3px #8b8b8b inset;
+            background: -webkit-linear-gradient(top,#656565,#4c4c4c);
+            background: -moz-linear-gradient(top,#656565,#4a4a4a);
+            background: linear-gradient(top,#656565,#4a4a4a);
+            margin-left: 20px;
+        }
+        .text{
+            margin-top:50px;
+        }
+        .content{
+            margin-top:10px;
+        }
+        .content span,.content b{
+            color: #fafafa;
+            letter-spacing: 0;
+            text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
+        }
+        .content span{
+            font-size: 120px;
+        }
+        .content b{
+            font-size:100px;
+            margin-bottom:10px;
+        }
+        .text span{
+            color: transparent;
+            -webkit-text-stroke: 1px black;
+            letter-spacing: 0.04em;
+            font-size:70px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="sets">
+        <span>距离</span>
+        <input type="text" value="" class="year"><span>年</span>
+        <input type="text" value="" class="month"><span>月</span>
+        <input type="text" value="" class="days"><span>号</span>
+        <input type="text" value="" class="hours"><span>还剩</span>
+        <button>重置</button>
+    </div>
+    <div class="text">
+        <span>天</span>
+        <span>时</span>
+        <span>分</span>
+        <span>秒</span>
+    </div>
+    <div class="content">
+        <span type="text" class="day"></span><b>:</b>
+        <span type="text" class="hour"></span><b>:</b>
+        <span type="text" class="min"></span><b>:</b>
+        <span type="text" class="sec"></span>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        var data={key1: "2016", key2: "02", key3: "05", key4: "18:30:00"};
+        if(localStorage.getItem('new_value')){
+            data=JSON.parse(localStorage.getItem('new_value'));
+        }
+        $('.year').val(data.key1);
+        $('.month').val(data.key2);
+        $('.days').val(data.key3);
+        $('.hours').val(data.key4);
+        var time=$('.month').val()+' '+$('.days').val()+','+$('.year').val()+' '+$('.hours').val();
+        $('button').on('click',function(){
+            if($('.month').val()==''||$('.days').val()==''||$('.year').val()==''||$('.hours').val()==''){
+                $('.sets input').each(function(){
+                    if($(this).val()==''){
+                        alert('日期必须填齐，谢谢！');
+                        $(this).focus();
+                        return;
+                   }
+                });
+                return;
+            }
+            if($('.hours').val().match(/^(\d{2}):(\d{2}):(\d{2})$/)==null){
+                alert('抱歉，你填入的日期格式有误，正确格式为 00:00:00');
+                $('.hours').focus();
+                return;
+            }
+            var vals=JSON.stringify({key1:$('.year').val(),key2:$('.month').val(),key3:$('.days').val(),key4:$('.hours').val()});
+            localStorage.setItem('new_value',vals);
+            window.location.reload();
+        })
+        setInterval(function(){
+            show_time(time);
+        }, 1000);
+    });
+    function show_time(time){
+        var now_time=new Date().getTime();//设定当前时间
+        var end_time=new Date(time).getTime();//设定目标时间
+        var time_distance=(end_time-now_time)/1000;//时间差
+        var day=parseInt(time_distance/(3600*24));time_distance%=3600*24;
+        var hour=parseInt(time_distance/(3600));time_distance%=3600;
+        var min=parseInt(time_distance/(60));
+        var sec=parseInt(time_distance%60);
+        $('.day').text(day<10?'0'+day:day);
+        $('.hour').text(hour<10?'0'+hour:hour);
+        $('.min').text(min<10?'0'+min:min);
+        $('.sec').text(sec<10?'0'+sec:sec);
+    }
+</script>
+
+</body>
+</html>
+
+
+
+
+

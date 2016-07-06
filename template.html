@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!-- To run the current sample code in your own environment, copy this to an html page. -->
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>jsRender之template</title>
+    <script src="js/jquery.js"></script>
+    <script src="js/jsrender.js"></script>
+</head>
+<body>
+<p>
+    这个插件主要是jsRender，参考网址：<a href="https://github.com/BorisMoore/jsrender">https://github.com/BorisMoore/jsrender</a>,
+    用来渲染模板；
+</p>
+<div id="result"></div>
+<div id="result2"></div>
+<script id="theTmpl" type="text/x-jsrender">
+<div>
+   <em>Name:</em> {{:name}}
+   {{if showNickname && nickname}}
+      (Goes by <em>{{:nickname}}</em>)
+   {{/if}}
+</div>
+</script>
+
+<script>
+    var data = [
+        {
+            "name": "Robert",
+            "nickname": "Bob",
+            "showNickname": true
+        },
+        {
+            "name": "Susan",
+            "nickname": "Sue",
+            "showNickname": false
+        }
+    ];
+
+    var template = $.templates("<li> {{:name}} </li>");
+    var htmlOutput = template.render(data);
+    var tmpl= $.templates("#theTmpl");
+    var htmlout=tmpl.render(data);
+
+    $("#result").html(htmlOutput);
+    $("#result2").html(htmlout);
+</script>
+
+</body>
+</html>

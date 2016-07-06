@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<div><a href="page1.html">link 1</a><a href="page2.html">link 2</a></div>
+<script>
+    (function($){
+        $.fn.changeColor=function(options){
+            //Default options
+            var settings= $.extend({
+                color:'red',
+                backgroundColor: 'green'
+            },options);
+            //Applay options
+            return this.css({color:settings.color,backgroundColor:settings.backgroundColor});
+        }
+    }(jQuery));
+    $('a').changeColor({
+        color: 'white',
+        backgroundColor:'red'
+    });
+</script>
+</body>
+</html>

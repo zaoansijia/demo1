@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title>chrismas</title>
+    <link rel='stylesheet' href='common.css' />
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
+    <script type="text/javascript" src="j_animates.js"></script>
+    <script src="christmas.js"></script>
+</head>
+
+<body>
+<section class="container">
+    <!-- 第一幅画面 -->
+    <section class="page-a bg-adaptive">
+        <div class="boy boy-deer"></div>
+        <figure class="moon"></figure>
+        <figure class="tree"></figure>
+        <figure class="cloudy"></figure>
+        <div class="window wood">
+            <div class="window-bg"></div>
+            <div class="window-content">
+                <div class="window-left"></div>
+                <div class="window-right"></div>
+            </div>
+        </div>
+    </section>
+    <!-- 第二幅画面 -->
+    <section class="page-b bg-adaptive">
+        <!--圣诞女孩-->
+        <figure class="cat"></figure>
+        <figure class="girl"></figure>
+        <!-- 圣诞男孩 -->
+        <figure class="christmas-boy-head"></figure>
+        <figure class="christmas-boy boy-walk"> </figure>
+    </section>
+    <!-- 第三幅画面 -->
+    <section class="page-c bg-adaptive">
+    </section>
+</section>
+<!--<button class="bt1">点击运行场景切换</button>-->
+<!--<button class="bt2">点击播放音乐</button>-->
+<!--<button class="bt3">点击播放循环音乐</button>-->
+<button class="bt4">点击运行雪橇运动</button>
+<button class="bt5">点击进入第二运动</button>
+<script type="text/javascript">
+    /**
+     * 自适应页面大小
+     * @param  {[type]} doc [description]
+     * @param  {[type]} win [description]
+     * @return {[type]}     [description]
+     */
+    var docEl = document.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function() {
+                //自适应设置容器高度
+                var container = document.querySelector(".container");
+                docEl.style.fontSize = 20 * (container.clientWidth / 320) + 'px';
+                //原始比例
+                var proportion = 900 / 1440;
+                container.style.height = container.clientWidth * proportion + "px";
+            };
+    window.addEventListener(resizeEvt, recalc, false);
+    document.addEventListener('DOMContentLoaded', recalc, false);
+//    $(document).ready(function(){
+        //Mycanvas.init();
+//    })
+</script>
+</body>
+
+</html>

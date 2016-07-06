@@ -1,0 +1,366 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>俄罗斯方块By王斌_code</title>
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
+    <script language='javascript'>
+        /*
+         **@author:王斌
+         **欢迎交流web技术
+         **http://honghu91-hotmail-com.iteye.com/
+         **/
+        $(document).ready(function(){
+            var WIDTH = 500;
+            var HEIGHT = 500;
+            var ROWS;
+            var COLS;
+            var level;//级别
+            var h;//计时器
+            var everyTime;//级别对应的时间
+            var state = 0;
+            var colors = ["d0d85d","37bcaf","fac0eb","faecd0","8eeae1","f981a3","83f8a2"];
+            var everyH;//每块的高度
+            var everyW;//每块宽度
+            var kit = {};//小部件函数对象
+            var cube = {};//方块对象
+            cube.color = "";//当前颜色
+            kit.realX = 0;//实际坐标x
+            kit.realY = 0;//实际坐标y
+            kit.dotToReal = function(x,y){//实现坐标转换，将数学坐标转换为实际的坐标
+                this.realX = x * everyW;
+                this.realY = y * everyH;
+            }
+            kit.show = function(x,y,i,is_next){//is_next标识是否是预测块显示
+                this.dotToReal(x,y);
+                if(i == 0){
+                    if(is_next == 1) $(".next").remove();
+                    else $(".wrapper .curr").remove();
+                }
+                if(is_next == 1) $(".wrapper").append("<div class='next' style='width:"+everyW+"px;height:"+everyH+"px;position:absolute;top:"+this.realY+"px;left:"+this.realX+"px;'></div>");
+                else $(".wrapper").append("<div class='curr' style='background:"+cube.color+";width:"+everyW+"px;height:"+everyH+"px;position:absolute;top:"+this.realY+"px;left:"+this.realX+"px;'></div>");
+            }
+            cube.nowDot = [];//方块的当前坐标数组，二维数组
+            cube.state = 0;//方块的初始状态，依此变换方块
+            cube.type = 0;//方块的种类
+            cube.nextType = Math.round(Math.random() * 6);//下一个方块种类
+            cube.nowCenter = [];//方块的中心坐标，可以由此代表方块整体坐标
+            cube.getNowDot = function(){//由中心坐标得到当前的四个坐标
+                var x = this.nowCenter[0];
+                var y = this.nowCenter[1];
+                var t = this.state % 4;
+                this.nowDot = this.getDot(x,y,cube.type,t);
+            }
+            cube.getDot = function(x,y,type,t){//此函数是依照当前方块的种类，由中心坐标得到给出返回四个坐标的数组
+                var nowDot;
+                switch(type){
+                    case 0:
+                        if(t == 0) nowDot = [[x-1,y],[x,y],[x+1,y],[x,y+1]];
+                        else if(t == 1) nowDot = [[x-1,y],[x,y-1],[x,y],[x,y+1]];
+                        else if(t == 2) nowDot = [[x-1,y],[x,y-1],[x,y],[x+1,y]];
+                        else if(t == 3) nowDot = [[x,y-1],[x,y],[x,y+1],[x+1,y]];
+                        break
+                    case 1:
+                        if(t == 0 || t == 2) nowDot = [[x-1,y],[x,y],[x+1,y],[x+2,y]];
+                        else if(t == 1 || t ==3) nowDot = [[x,y-1],[x,y],[x,y+1],[x,y+2]];
+                        break;
+                    case 2:
+                        if(t == 0) nowDot = [[x-1,y],[x,y],[x,y+1],[x,y+2]];
+                        if(t == 1) nowDot = [[x-2,y],[x-1,y],[x,y],[x,y-1]];
+                        if(t == 2) nowDot = [[x,y-1],[x,y],[x,y+1],[x+1,y+1]];
+                        if(t == 3) nowDot = [[x,y+1],[x,y],[x+1,y],[x+2,y]];
+                        break;
+                    case 3:
+                        if(t == 0) nowDot = [[x+1,y],[x,y],[x,y+1],[x,y+2]];
+                        if(t == 1) nowDot = [[x-2,y],[x-1,y],[x,y],[x,y+1]];
+                        if(t == 2) nowDot = [[x,y-1],[x,y],[x,y+1],[x-1,y+1]];
+                        if(t == 3) nowDot = [[x,y-1],[x,y],[x+1,y],[x+2,y]];
+                        break;
+                    case 4:
+                        nowDot = [[x,y],[x+1,y],[x,y+1],[x+1,y+1]];
+                        break;
+                    case 5:
+                        if(t == 0 || t == 2) nowDot = [[x-1,y],[x,y],[x,y+1],[x+1,y+1]];
+                        if(t == 1 || t == 3) nowDot = [[x,y+1],[x,y],[x+1,y],[x+1,y-1]];
+                        break;
+                    case 6:
+                        if(t == 0 || t == 2) nowDot = [[x+1,y],[x,y],[x,y+1],[x-1,y+1]];
+                        if(t == 1 || t == 3) nowDot = [[x,y-1],[x,y],[x+1,y],[x+1,y+1]];
+                        break;
+                }
+                return nowDot;
+            }
+            cube.show = function(x,y){//x,y是中心坐标，显示由中心坐示代表的方块
+                this.nowCenter = [x,y];
+                this.getNowDot();
+                var i=0;
+                for(i;i<this.nowDot.length;i++){
+                    kit.show(this.nowDot[i][0],this.nowDot[i][1],i,0);
+                }
+            }
+            cube.nextShow = function(x,y,t){//显示预测块
+                var nextDot = this.getDot(x,y,cube.nextType,t);
+                var i;
+                for(i in nextDot){
+                    kit.show(nextDot[i][0],nextDot[i][1],i,1);
+                }
+            }
+            cube.moveLeft = function(){//方块向左移动一格，只需将中心坐标向左移动一格即可
+                var x = this.nowCenter[0];
+                var y = this.nowCenter[1];
+                this.show(x-1,y);
+            }
+            cube.moveRight = function(){//方块右移
+                var x = this.nowCenter[0];
+                var y = this.nowCenter[1];
+                this.show(x+1,y);
+            }
+            cube.moveDown = function(){//方块下移
+                var x = this.nowCenter[0];
+                var y = this.nowCenter[1];
+                this.show(x,y+1);
+            }
+            cube.change = function(){//方块变形
+                this.state++;//方块状态+1
+                var x = this.nowCenter[0];
+                var y = this.nowCenter[1];
+                this.show(x,y);//重新显示方块
+            }
+            cube.changeColor = function(){
+                var t = parseInt(Math.random()*6);
+                cube.color = "#"+colors[t];
+            }
+            var fangkuai = {};//构造主控制对象
+            fangkuai.score = 0;//记录分数
+            fangkuai.dot = [[]];//记录地图坐标，dot[x][y]=0，表示坐标(x,y)没有块，否则有块
+            fangkuai.lose = 0;//记录是否输了
+            fangkuai.init = function(){//初始化地图坐标
+                var temp = new Array();
+                var temp2 = [];
+                for(var i = 0;i<COLS;i++){
+                    this.dot[i] = new Array();
+                    for(var j = 0;j<=ROWS;j++){
+                        if(j == ROWS) this.dot[i][j] = 1;//底边界当做是有块
+                        else this.dot[i][j] = 0;//其他全无块
+                    }
+                }
+            }
+            fangkuai.checkDown = function(){//检查是否可以下移一格
+                for(i in cube.nowDot){
+                    var x = cube.nowDot[i][0];
+                    var y = cube.nowDot[i][1] + 1;
+                    if(this.dot[x][y] != 0) return 0;
+                }
+                return 1;
+            }
+            fangkuai.checkLeft = function(){//检查是否可以左移一格
+                for(i in cube.nowDot){
+                    var x = cube.nowDot[i][0] - 1;
+                    var y = cube.nowDot[i][1];
+                    if(x < 0 || this.dot[x][y] != 0) return 0;
+                }
+                return 1;
+            }
+            fangkuai.checkRight = function(){//检查是否可以右移
+                for(i in cube.nowDot){
+                    var x = cube.nowDot[i][0] + 1;
+                    var y = cube.nowDot[i][1];
+                    if(x >= COLS || this.dot[x][y] != 0) return 0;
+                }
+                return 1;
+            }
+            fangkuai.checkChange = function(){//检查是否可以变换，方法是假如变换了，是否块坐标对应的地图坐标为1或出边界，若有则无法变换
+                var x = cube.nowCenter[0];
+                var y = cube.nowCenter[1];
+                var t = (cube.state + 1) % 4;
+                var nextDot;
+                nextDot = cube.getDot(x,y,cube.type,t);
+                for(i in nextDot){
+                    var x = nextDot[i][0];
+                    var y = nextDot[i][1];
+                    if( x < 0 || x > COLS-1 || y > ROWS-1 || fangkuai.dot[x][y] != 0) return 0;
+                }
+                return 1;
+            }
+            fangkuai.paint = function(){//依照地图坐标重绘地图
+                $(".wrapper .already").remove();
+                for(var i = 0;i < COLS;i++){
+                    for(var j = 0;j < ROWS;j++){
+                        if(this.dot[i][j] != 0){
+                            kit.dotToReal(i,j);
+                            $(".wrapper").append("<div class='already' style='width:"+everyW+"px;height:"+everyH+"px;position:absolute;top:"+kit.realY+"px;left:"+kit.realX+"px;'></div>");
+                        }
+                    }
+                }
+            }
+            fangkuai.checkDel = function(){//消行
+                var temp = [];
+                var from = ROWS - 1;
+                for(from;from > 0;from--){
+                    var flag = 0;
+                    for(var j = 0;j < COLS;j++){
+                        if(this.dot[j][from] == 0){
+                            flag = 1;//有0存在则不可消
+                            break;
+                        }
+                    }
+                    if(flag == 0){//可消行
+                        this.score++;
+                        for(var i = 0;i < COLS;i++){
+                            this.dot[i].splice(from,1);
+                            this.dot[i].splice(0,0,0);
+                        }
+                        from++;//回退
+                    }
+                }
+                this.paint();//重绘
+                $(".score").html("得分:"+this.score+"分");
+            }
+            fangkuai.moveNext = function(){//下移方块
+                if(fangkuai.checkDown()) cube.moveDown();
+                else{//不可移了
+                    for(i in cube.nowDot){
+                        var x = cube.nowDot[i][0];
+                        var y = cube.nowDot[i][1];
+                        fangkuai.dot[x][y] = 1;
+                        if(y == 0){
+                            clearInterval(h);
+                            $(".wrapper .msg").remove();
+                            $(".wrapper").append("<div class='msg'>你输了<br>现在你可以重新设置参数<br>按回车键重新开始</div>"); fangkuai.lose = 1;
+                            state = 0;
+                            return;
+                        }
+                    }
+                    fangkuai.checkDel();//检测消行
+                    cube.type = cube.nextType;
+                    cube.nextType = Math.round(Math.random() * 6);//重新产生方块
+                    cube.changeColor();
+                    cube.show(4,0);
+                    cube.nextShow(COLS+3,0,0);
+                }
+            }
+            fangkuai.run = function(){
+                h = setInterval(fangkuai.moveNext,everyTime);
+            }
+            fangkuai.start = function(){//开始游戏
+                $(".msg").remove();
+                cube.nextShow(COLS+3,0,0);
+                cube.type = Math.round(Math.random());
+                cube.changeColor();
+                cube.show(4,0);
+                fangkuai.init();
+                fangkuai.paint();
+                fangkuai.run();
+            }
+            fangkuai.restart = function(){//重新开始
+                h = setInterval(fangkuai.moveNext,everyTime);
+            }
+            fangkuai.pause = function(){
+                clearInterval(h);
+            }
+//-------------注册事件----
+            $(document).keydown(function(event){
+                if(event.keyCode == 37) {
+                    if(fangkuai.checkLeft()) cube.moveLeft();
+                }
+                else if(event.keyCode == 39) {
+                    if(fangkuai.checkRight()) cube.moveRight();
+                }
+                else if(event.keyCode == 38) {
+                    if(fangkuai.checkChange()) cube.change();
+                }
+                else if(event.keyCode == 40){
+                    fangkuai.moveNext();
+                }
+                if(event.keyCode == 13) {
+                    ROWS = parseInt($("#rows").attr("value"));
+                    if(isNaN(ROWS)) {
+                        alert("行数请输入数字");
+                        $("#rows").attr("value",10);
+                        ROWS = 10;
+                    }
+                    COLS = parseInt($("#cols").attr("value"));
+                    if(isNaN(COLS)) {
+                        alert("列数请输入数字");
+                        $("#cols").attr("value",10);
+                        COLS = 10;
+                    }
+                    level = parseInt($("#level").attr("value"));
+                    if(isNaN(level)) {
+                        alert("级别请输入数字");
+                        $("#level").attr("value",1);
+                        level = 5;
+                    }
+                    if(level < 10) everyTime = (10 - level) * 200;
+                    else everyTime = 100;
+                    everyH = HEIGHT / ROWS;//块的高度
+                    everyW = WIDTH / COLS;//每块宽度
+                    if(state == 0){
+                        fangkuai.start();
+                        state = 1;
+                    }
+                    else if(state == 1){
+                        fangkuai.pause();
+                        state = 2;
+                        $(".wrapper .msg").remove();
+                        $(".wrapper").append("<div class='msg'>暂停中</div>");
+                    }
+                    else{
+                        fangkuai.restart();
+                        $(".wrapper .msg").remove();
+                        state = 1;
+                    }
+                }
+            });
+        });
+    </script>
+    <style type='text/css'>
+        .wrapper{
+            position:relative;
+            width:500px;
+            height:500px;
+            border:10px solid red;
+        }
+        .already{
+            background:#666;
+            border:1px solid #333;
+        }
+        .next,.curr{
+            background:#ccc;
+        }
+        .msg{
+            font-size:24px;
+            position:absolute;
+            padding:20px 0;
+            top:130px;
+            background:#ccc;
+            width:100%;
+            text-align:center;
+            z-index:3;
+        }
+        .curr{
+            border:1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+    <div class='msg'>
+        按回车键开始<br />
+        游戏前，你可以设置行数，列数，级别，然后按回车开始,建议行列不要相差太大<br />
+        按上下左右键<br />游戏中回车暂停、继续<br />
+        by王斌<br />
+        http://honghu91-hotmail-com.iteye.com/
+    </div>
+</div>
+<div class='show' style='position:absolute;right:200px;top:0;'>
+</div>
+<div class='score'>
+    得分:0分
+</div>
+<div class='arg'>
+    行数<input type='text' id='rows' value='10' />
+    列数<input type='text' id='cols' value='10' />
+    级别<input type='text' id='level' value='5' />
+</body>
+</html>

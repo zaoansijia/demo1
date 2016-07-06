@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>select之palceholder</title>
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
+    <style>
+        select option {
+            color: black;
+        }
+        select option:first-child {
+            color: grey;
+        }
+        select.empty {
+            color: grey;
+        }
+    </style>
+</head>
+<body>
+<select>
+    <option value="" selected>Please select</option>
+    <option value="1">Item 1</option>
+    <option value="2">Item 2</option>
+    <option value="3">Item 3</option>
+</select><br />
+Hidden placeholder<br />
+<select class="empty">
+    <option value="" selected disabled>Please select</option>
+    <option value="1">Item 1</option>
+    <option value="2">Item 2</option>
+    <option value="3">Item 3</option>
+</select>
+
+</body>
+<script>
+    // JavaScript toggles the grey color of the control when the placeholder is selected
+    $("select:has(option[value=]:first-child)").on('change', function() {
+        $(this).toggleClass("empty", $.inArray($(this).val(), ['', null]) >= 0);
+    }).trigger('change');
+</script>
+</html>

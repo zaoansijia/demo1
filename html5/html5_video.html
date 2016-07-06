@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="../js/jquery.js"></script>
+    <title>html5 video</title>
+</head>
+<body>
+<div style="text-align:center">
+    <button onclick="playPause()">播放/暂停</button>
+    <button onclick="makeBig()">大</button>
+    <button onclick="makeNormal()">中</button>
+    <button onclick="makeSmall()">小</button>
+    <br/>
+    <video id="video1" width="420" style="margin-top: 15px;">
+        <source src="http://www.w3school.com.cn/example/html5/mov_bbb.mp4"/>
+        <!--<source src="http://www.w3school.com.cn/example/html5/mov_bbb.ogg"/>-->
+        your browser does not support html5 video,sorry;
+    </video>
+</div>
+</body>
+<script type="text/javascript">
+//    var myVideo=$("#video1");(用jquery出错的原因是pause（）不是属于jquery的方法)
+    var myVideo=document.getElementById("video1");
+    function playPause()
+    {
+        if (myVideo.paused)
+            myVideo.play();
+        else
+            myVideo.pause();
+    }
+    function makeBig(){
+        myVideo.width=760;
+    }
+    function makeSmall(){
+        myVideo.width=300;
+    }
+    function makeNormal(){
+        myVideo.width=420;
+    }
+</script>
+</html>

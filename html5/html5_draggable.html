@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <style type="text/css">
+        #div1, #div2
+        {float:left; width:400px; height:200px; margin:10px;padding:10px;border:1px solid #aaaaaa;}
+    </style>
+    <!--<script type="text/javascript">-->
+        <!--function allowDrop(ev)-->
+        <!--{-->
+            <!--ev.preventDefault();//取消事件的默认行为；-->
+        <!--}-->
+
+        <!--function drag(ev)-->
+        <!--{-->
+            <!--ev.dataTransfer.setData("Text",ev.target.id);//规定了被拖动的数据，设置被拖动数据的类型和值console.log(data);-->
+            <!--//taget属性可返回事件的目标节点（触发该事件的节点），如生成时间的元素，文档或窗口；-->
+        <!--}-->
+
+        <!--function drop(ev)-->
+        <!--{-->
+            <!--ev.preventDefault();-->
+            <!--var data=ev.dataTransfer.getData("Text");-->
+            <!--ev.target.appendChild(document.getElementById(data));-->
+            <!--//appendChild()在列表中添加项目；appendChild你可以理解为移动一个元素；-->
+            <!--//appendChild(Node)这个 方法一般是在指定元素节点的最后一个子节点之后添加节点；append()前面是要选择的对象，-->
+            <!--// 后面是要-->
+            <!--//在对象内插入的元素内容-->
+        <!--}-->
+    <!--</script>-->
+    <script>
+        function allowDrop(e){
+            e.preventDefault();
+        }
+        function drag(e){
+            e.dataTransfer.setData('text', e.target.id);
+        }
+        function drop(e){
+            e.preventDefault();
+            var data= e.dataTransfer.getData('text');
+            e.target.appendChild(document.getElementById(data));
+        }
+        //为了使元素可以拖动，需要设置属性：draggable=true;
+        //ondragstar属性规定当元素被拖动时，发生什么；
+        //ondragover属性规定在何处放置被拖动的数据；
+    </script>
+</head>
+<body>
+
+<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <img src="image\logo1.png" draggable="true" ondragstart="drag(event)" id="drag1" />
+</div>
+<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <img src="image\img1.jpg" draggable="true" ondragstart="drag(event)" id="drag2" style="width: 100px;height: 100px;"/>
+</div>
+
+</body>
+</html>

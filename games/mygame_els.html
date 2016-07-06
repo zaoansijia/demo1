@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game_els</title>
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
+    <style>
+        body{
+            background-color: #656565;
+            font-size:18px;
+        }
+        table{
+            border-collapse:collapse;
+        }
+        table,tr,td{
+            border:none;
+        }
+        table tr td{
+            width:40px;
+            height: 40px;
+            background-color:#656565;
+        }
+        .container{
+            background-color: #656565;
+            overflow: hidden;
+            padding:70px;
+            text-align: center;
+        }
+        #table1 tr td{
+            border:1px solid grey;
+        }
+        #table2{
+            border:1px solid grey;
+        }
+        .cube{
+            color: #8c96a0;
+            text-shadow: 1px 1px 1px #fff;
+            border: 1px solid #dce1e6!important;
+            box-shadow: 0 1px 2px #fff inset,0 -1px 0 #a8abae inset;
+            background: -webkit-linear-gradient(top,#f2f3f7,#e4e8ec);
+        }
+        .content,#table1{
+            display: inline-block;
+        }
+        .content{
+            background-color:#656565;
+            color:#fff;
+            padding:0 20px;
+            position: relative;
+            top:-20px;
+        }
+        input{
+            width:100px;
+            background-color: #fafafa;
+            border-radius: 2px;
+            margin-bottom: 10px;
+        }
+        button,.set{
+            width: 100px;
+            line-height: 30px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 5px;
+            overflow: hidden;
+            color: #8c96a0;
+            text-shadow:1px 1px 1px #fff;
+            border:1px solid #dce1e6;
+            box-shadow: 0 1px 2px #fff inset,0 -1px 0 #a8abae inset;
+            background: -webkit-linear-gradient(top,#f2f3f7,#e4e8ec);
+            background: -moz-linear-gradient(top,#f2f3f7,#e4e8ec);
+            background: linear-gradient(top,#f2f3f7,#e4e8ec);
+        }
+        .set{
+            width:200px;
+        }
+        .content span{
+            padding-left:20px;
+            font-size:20px;
+        }
+        .text{
+            color: transparent;
+            -webkit-text-stroke: 1px #fff;
+            letter-spacing: 0.04em;
+            font-size: 40px;
+            margin-top:20px;
+            margin-bottom:20px;
+        }
+        .text span{
+            font-size: 40px;
+        }
+        .bot{
+            color:#fff;
+            position: absolute;
+            bottom:10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div id="table1"></div>
+    <div class="content">
+        <p class="text">NEXT CUBE</p>
+        <div id="table2">
+        </div>
+        <p class="text">SCORE:<span class="score"></span></p>
+        <form>
+            <div><label>LEVEL：</label><input value="1" class="level set"></div>
+            <div><label>ROWS：</label><input value="16" class="row set"></div>
+            <div><label>CELLS：</label><input value="12" class="cell set"></div>
+            <div style="margin-top:20px;">
+                <button type="button" class="btn1">DRAW</button>
+                <button type="button" class="btn2">START</button>
+                <button type="button" class="btn3">PAUSE</button>
+            </div>
+        </form>
+    </div>
+    <div class="bot">It's by @Anan;</div>
+</div>
+<script>
+    var timer,number,nextnum,t_row,t_cell,level;
+    var now_cube=[];
+    var now_cube1=[];
+    var num=Math.round(Math.random() * 6);
+    var board=new Array(11);
+    var score=0;
+    var colors=['red','green','black','grey'];
+    $(document).ready(function(){
+        mytable(6,10,"next","table2");
+        $('.btn1').on('click',function(){
+            t_row=$('.row').val();
+            t_cell=$('.cell').val();
+            level=$('.level').val();
+            $('#table1').html('');
+            mytable(t_row,t_cell,"table","table1");
+            //以下是定义一个二维对象数组来记录表格的填充情况
+            for(var i=0;i<t_row;i++){
+                board[i]=new Array();
+                for(var j=0; j<t_cell; j++){
+                    board[i][j] = 0;//初始的时候未填充是0，如果填充后将值改为1，这样来记录是否方格是否被占
+                }
+            }
+        });
+        $('.btn2').on('click',function(){
+            begin(true);
+        });
+        $('.btn3').on('click',function(){
+            var txt=$('.btn3').text();
+            if(txt=='暂停'){
+                clearInterval(timer);
+                $('.btn3').text('继续');
+            }
+            else{
+                timer = setInterval(movedown,parseInt(1000/level));
+                $('.btn3').text('暂停');
+            }
+        })
+        document.onkeydown=keycontrol;
+    });
+    function mytable(row,cell,child,parent){
+        var mytable="<table id="+child+"  border=1 style='border-collapse:collapse;'>";
+        for(var i=0;i<row;i++){
+            mytable+="<tr>";
+            for(var j=0; j<cell; j++){
+                mytable+="<td></td>";
+            }
+            mytable+="</tr>"
+        }
+        mytable+="<table>";
+        $('#'+parent).append(mytable);
+    }
+    function init_cube(type,cube,m,n){
+        //num=parseInt(Math.random()*7);
+        switch (type){
+            case 0:{
+                cube=[{x:m, y:n},{x:m, y:(n+1)},{x:(m+1), y:(n+1)},{x:(m+1), y:(n+2)}];//反z形
+                break;
+            }
+            case 1:{
+                cube=[{x:m,y:n},{x:(m+1), y:n},{x:m, y:(n+1)},{x:(m+1), y:(n+1)}];//田字形状
+                break;
+            }
+            case 2:{
+                cube= [{x:m,y:n},{x:m,y:(n+1)},{x:m,y:(n+2)},{x:m,y:(n+3)}];//"|"形状
+                break;
+            }
+            case 3:{
+                cube = [{x:m,y:n},{x:m,y:(n+1)},{x:(m+1), y:(n+1)},{x:(m+2), y:(n+1)}];//'L'字形状
+                break;
+            }
+            case 4:{
+                cube = [{x:m, y:(n+1)},{x:(m+1), y:(n+1)},{x:(m+2), y:(n+1)},{x:(m+2), y:n}];//"J"字形状
+                break;
+            }
+            case 5:{
+                cube = [{x:(m+1), y:n},{x:m, y:(n+1)},{x:(m+1), y:(n+1)},{x:(m+2), y:(n+1)}];//’倒T‘字形状
+                break;
+            }
+            case 6:{
+                cube = [{x:(m+1), y:n},{x:m, y:(n+1)},{x:(m+1), y:(n+1)},{x:m, y:(n+2)}];////"z"字形
+                break;
+            }
+        };
+        return cube;
+    }
+    function keycontrol(event){
+        var keycode=event.keyCode;
+        switch(keycode){
+            case 37:{
+                leftmove();
+                break;
+            }
+            case 38:{
+                rotate();
+            }
+            case 39:{
+                rightmove()
+                break;
+            }
+            case 40:{
+                movedown();
+                break;
+            }
+        }
+    }
+    function game_over(){
+        //检查刚生产的四个小方格是否可以放在初始化的位置.
+        for(var i=0; i<4; i++){
+            if(!isOK(now_cube[i].x, now_cube[i].y)){
+                return false;
+            }
+        }
+        return true;
+    }
+    function begin(status){
+        if(status){
+            wipeall(true);
+            $('.score').text('0');
+            $('.btn1').attr('disabled',true);
+        };
+        number=parseInt(Math.random()*3);
+        now_cube=init_cube(num,now_cube,0,4);
+        if(!game_over()){
+            alert('game over!(可以点击开始重新开始)');
+            $('.btn1').attr('disabled',false);
+            return false;
+        }
+        paint_wipe(true);
+        timer = setInterval(movedown,parseInt(1000/level));
+        nextnum = Math.round(Math.random() * 6);//重新产生方块
+        now_cube1=init_cube(nextnum,now_cube1,1,4);
+        nextshow();
+    }
+    //绘制一行空白行
+    function blank_row(){
+        var row = [];
+        for(var i=0; i<t_row; i++){
+            row[i] = 0;
+        }
+        return row;
+    }
+    //绘制或者擦拭掉俄罗斯方块形状
+    function paint_wipe(status){
+        for(var i=0; i<4; i++){
+            if(status==true){
+                $('#table tr').eq(now_cube[i].x).find('td').eq(now_cube[i].y).addClass('cube');
+            }
+            else{
+                $('#table tr').eq(now_cube[i].x).find('td').eq(now_cube[i].y).removeClass('cube');
+            }
+//            table.rows[now_cube[i].x].cells[now_cube[i].y].style.backgroundColor=colors[number];
+        }
+    }
+    function nextshow(){
+        $('#next tr td').removeClass('cube');
+        for(var i=0; i<4; i++){
+            $('#next tr').eq(now_cube1[i].x).find('td').eq(now_cube1[i].y).addClass('cube');
+        }
+    }
+
+    //更新board
+    function updateboard(){
+        for(var i=0;i<4;i++){
+            board[now_cube[i].x][now_cube[i].y]=1;
+        }
+    }
+    //擦掉整个面板或者原来的整个面板整个面板
+    function wipeall(status){
+        for(var i=0;i<t_row;i++){
+            for(var j=0; j<t_cell; j++){
+                $('#table tr').eq(i).find('td').eq(j).removeClass('cube');
+                if(status==true){
+                    board[i][j]=0;
+                }
+            }
+        }
+    }
+    function paintboard(){
+        //重绘整个面板
+        for(var i=0;i<t_row;i++){
+            for(var j=0; j<t_cell; j++){
+                if(board[i][j]==1){
+                    $('#table tr').eq(i).find('td').eq(j).addClass('cube');
+                   //table.rows[i].cells[j].style.backgroundColor = "red";(以js的方式获取)
+                }
+            }
+        }
+    }
+    //消除新的一行
+    function remove_rows(){
+        var rows=0;
+        for(var i=0;i<t_row;i++){
+            var j=0;
+            for(;j<t_cell; j++){
+                //判断是否一行是否填满
+                if(board[i][j]==0){
+                    break;
+                }
+            }
+            //如果一行填满了
+            if(j==t_cell){
+                rows++;//每满一行就加一行
+                if(i!=0){
+                    for(var k=i-1;k>=0;k--){
+                        board[k+1]=board[k];
+                    }
+                }
+                board[0] = blank_row();
+            }
+        }
+        return rows;
+    }
+    //键盘控制
+    //方向运动运动
+    function direct_select(direct){
+        paint_wipe(false);
+        for(var i=0;i<4;i++){
+            switch (direct){
+                case 0:{
+                    now_cube[i].x+=1;
+                    break;
+                }
+                case 1:{
+                    now_cube[i].y-=1;
+                    break;
+                }
+                case 2:{
+                    now_cube[i].y+=1;
+                    break;
+                }
+            }
+
+        }
+        paint_wipe(true);
+    }
+    //下降运动
+    function movedown(){
+        if(checkbottom()){
+            direct_select(0);
+        }
+        else{
+            updateboard();
+            var rows=remove_rows();
+            //如果有消行, 则
+            if(rows!=0){
+            //更新分数
+                score = score + rows*10;
+                $(".score").text(score);
+                wipeall(false);
+                paintboard();//重绘面板
+            }
+            clearInterval(timer);
+            num = nextnum;
+            begin();
+        }
+    }
+    //左移运动
+    function leftmove(){
+        if(checkleft()){
+            direct_select(1);
+        }
+    }
+    //右移运动
+    function  rightmove(){
+        if(checkright()){
+            direct_select(2);
+        }
+    }
+    //翻转运动
+    function  rotate(){
+        var new_cube = [];
+        for(var i=0; i<4; i++){
+            new_cube[i] = {x:0, y:0};
+        }
+        for(var i=0; i<4; i++){
+            new_cube[i].x = now_cube[i].x;
+            new_cube[i].y = now_cube[i].y;
+        }
+    //求4个点的中心点，再围绕中心选择
+        var cx = Math.round((new_cube[0].x + new_cube[1].x + new_cube[2].x + new_cube[3].x)/4);//math.round()四舍五入，求整数；
+        var cy = Math.round((new_cube[0].y + new_cube[1].y + new_cube[2].y + new_cube[3].y)/4);
+        for(var i=0; i<4; i++){
+            new_cube[i].x = cx+cy-now_cube[i].y;//旋转点的坐标x
+            new_cube[i].y = cy-cx+now_cube[i].x;//旋转点的坐标y
+        }
+        for(var i=0;i<4;i++){
+            if(!isOK(new_cube[i].x,new_cube[i].y)){
+                return;
+            }
+        }
+        paint_wipe(false);
+        for(var i=0;i<4;i++) {
+            now_cube[i].x = new_cube[i].x;//旋转点的坐标x
+            now_cube[i].y = new_cube[i].y;//旋转点的坐标y
+        }
+        paint_wipe(true);
+    }
+    //判断是否到底底部
+    function checkbottom(){
+        for(var i=0;i<4;i++){
+            if(!isOK(now_cube[i].x+1,now_cube[i].y)){
+                return false;
+            }
+        }
+        return true;
+    }
+    //判断是否触碰两边
+    function  checkleft(){
+        for(var i=0;i<4;i++){
+            if(!isOK(now_cube[i].x,now_cube[i].y-1)){
+                return false;
+            }
+        }
+        return true;
+    }
+    //判断是否触碰右边
+    function  checkright(){
+        for(var i=0;i<4;i++){
+            if(!isOK(now_cube[i].x,now_cube[i].y+1)){
+                return false;
+            }
+        }
+        return true;
+    }
+    //判断是否能旋转
+    function isOK(x,y){
+        if(x>(t_row-1)||x<0||y>(t_cell-1)||y<0){
+            return false;
+        }
+        if(board[x][y]==1){
+            return false;
+        }
+        return true;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
+
+</head>
+<body>
+<select class="aa" name="">
+    <option value="0">00</option>
+    <option value="1">11</option>
+    <option value="2">22</option>
+    <option value="3">33</option>
+    <option value="4">44</option>
+</select>
+
+</body>
+<script>
+    $(function(){
+        var sel = $(".aa");
+        sel.click(function(){
+            var x=$(this).find("option").length;
+            if($(this).prop("size")=="0"){
+                $(this).prop("size",x)
+            }else{
+                $(this).prop("size",0)
+            }
+        })
+        sel.click()
+    })
+</script>
+</html>

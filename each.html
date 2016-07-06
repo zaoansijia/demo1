@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery.js"></script>
+    <style>
+        #negativeValidation li {color: green}
+        #negativeValidation li.negative {color: red}
+    </style>
+</head>
+<body>
+<div>
+    <ul id="negativeValidation">
+        <li>999</li>
+        <li>-999</li>
+    </ul>
+</div>
+
+<script>
+    $(document).ready(function() {
+        //第一种方法
+//        $('#negativeValidation li').each(function(){
+//            var color = $(this).is(':contains(-)') ? 'red' :'green';
+//            $(this).css('color',color);
+//        });
+        //第二种方法
+        $('#negativeValidation li').each(function() {
+            console.log(+$(this).text());
+        });
+        $('#negativeValidation li').filter(function() {
+            return +$(this).text() < 0;
+            console.log('+$(this).text()');
+
+        }).addClass('negative');
+        console.log(typeof '10');
+        console.log(typeof +'10');
+    });
+</script>
+</body>
+</html>

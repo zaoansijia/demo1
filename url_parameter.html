@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
+
+</head>
+<body>
+<a href="http://localhost:63342/demo/ff.html?name=3195519?1?0?7">ff</a>
+
+</body>
+<script>
+    function getParameter(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]); return null;
+    }
+    var name_type=getParameter('');
+    var r= window.location.href;
+    r.split('?');
+    console.log(r.split('?'));
+    console.log(name_type)
+</script>
+</html>

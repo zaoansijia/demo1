@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.js"></script>
+    <script src="http://apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<div><a></a></div>
+<script>
+    var lotteries=[{"id":1, "name":'notebook'},{"id":2, "name":'glasses'},{"id":3, "name":'pencil'},{"id":4, "name":'book'},{"id":5, "name":'sorry'}];
+    (function ($, window, document, undefined) {
+        $.widget("myName.lottery",{
+            options:{
+                value:null
+            },
+            value:function(value){
+                if(value===undefined){
+                 return this.options.value;
+                }else{
+                    alert('ss');
+                }
+            },
+            _setoptions:function(data){
+                console.log(data)
+            },
+            init:function(){
+                console.log(this.options.initData)
+            }
+        });
+    }(jQuery, window, document));
+    $('a').lottery({
+        value:lotteries
+    });
+    $('a').lottery('value',lotteries)
+
+</script>
+
+</body>
+</html>

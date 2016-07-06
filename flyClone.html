@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+<!--<input id="Button1" type="button" value="button" />-->
+<table style="width: 100%;">
+    <tr>
+        <td>
+            <div style="width:100px; height: 100px; border: 1px solid #f08080" id="shop">购物车</div>
+        </td>
+    </tr>
+    <tr>
+        <td style="height: 500px">&nbsp;</td>
+    </tr>
+    <tr>
+        <td>
+            <div style="width: 50px; height: 50px; background-color: #f08080" id="product">
+                商品
+            </div>
+        </td>
+    </tr>
+</table>
+</body>
+<script>
+    $(function() {
+        $("#product").click(function() {
+            var shopOffset = $("#shop").offset();
+            var cloneDiv = $("#product").clone();
+            var proOffset = $("#product").offset();
+            cloneDiv.css({ "position": "absolute", "top": proOffset.top, "left": proOffset.left });
+            $("#product").parent().append(cloneDiv);
+            cloneDiv.animate({
+                left: shopOffset.left,
+                top: shopOffset.top,
+                width:0,
+                height:0
+            },"slow");
+//            cloneDiv.fly({
+//                start: {
+//                    left: event.pageX,
+//                    top: event.pageY
+//                },
+//                end: {
+//                    left: offset.left+10,
+//                    top: offset.top+10,
+//                    width: 0,
+//                    height: 0
+//                },
+//                onEnd: function(){
+//                    $("#msg").show().animate({width: '250px'}, 200).fadeOut(1000);
+//                    this.destory();
+//                }
+//            });
+
+        });
+    });
+</script>
+</html>

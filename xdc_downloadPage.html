@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/public/img/favicon.ico">
+    <title>心动云App下载</title>
+</head>
+<style>
+    #barcode{
+        width:100%;height: 100%;
+        position: relative;
+        padding-top:100px;
+    }
+    #barcode h1,#barcode p,#barcode img{
+        text-align: center;
+    }
+    #barcode p{
+        font-size: 24px;
+    }
+    #barcode h1{
+        font-size: 56px;
+        font-weight: bolder!important;
+    }
+    #barcode p{
+        font-weight:bolder;
+    }
+    .code_img{
+        text-align: center;
+        margin:0 auto;
+        position: relative;
+        width:50%;
+    }
+    .code_img .img1{
+        width:100%;
+    }
+    .code_img .img2{
+        position: absolute;
+        left:50%;
+        top:50%;
+        width:26.68%;
+        margin-left:-13.6%;
+        margin-top:-13.34%;
+        border-radius: 10px;
+    }
+    .noprint{
+        text-align: right;
+    }
+    .noprint button{
+        cursor: pointer;
+        font-size: 24px;
+        position: fixed;
+        top:20px;
+        right: 20px;
+    }
+    @media print {
+        .noprint{display:none;}
+    }
+</style>
+<body>
+<div id="barcode">
+    <div class="noprint">
+        <button onclick= "window.print() ">打印</button>
+    </div>
+    <h1>{{ .shop.ShopName }}</h1>
+    <div>
+        <p>扫描下载<span class="app_name">{{ if eq .appType "member"}}会员{{ end }}{{ if eq .appType "staff"}}员工{{ end }}{{ if eq .appType "boss"}}老板{{ end }}</span>端</p>
+        <div class="code_img"><img class="img1" src="/public/img/barcode/{{ .appType }}s.png"/><img class="img2" src={{ .logo.Raw }}></div>
+    </div>
+    <!--<div class="code_ios">-->
+    <!--<p>iOS <span class="app_name">{{ if eq .appType "member"}}会员{{ end }}{{ if eq .appType "staff"}}员工{{ end }}{{ if eq .appType "boss"}}老板{{ end }}</span>端</p>-->
+    <!--<div class="code_img"><img class="img1" src="/public/img/barcode/{{ .appType }}_ios.png"/><img class="img2" src={{ .profile.LogoPath }}></div>-->
+    <!--</div>-->
+</div>
+
+</body>
+</html>

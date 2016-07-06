@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!--我的邀请 2016.07.01----yangliu2@meilele.com-->
+        <style type="text/css">
+            .content-list{  font-size:13px;  }
+            .content-list .c-title{  margin-bottom: 24px;  }
+            .content-list .inviteInfo{  padding-left:15px;  }
+            .content-list .helpTxt{  border:1px solid #efefef;padding:7px 0 7px 10px;  }
+            .content-list .i-warn{width: 14px;  height: 15px;  -moz-border-radius: 20px;  -webkit-border-radius: 20px;  border-radius: 8px;  color: red;  border: 1px solid red;  display: inline-block;  text-align: center;  font-size: 12px;  margin-right: 10px}
+            .content-list .inBox{  margin-top:25px; margin-bottom:25px;padding-left:320px;font-weight: bolder;  }
+            .content-list .stars{ color:#FF0000;  }
+            .content-list #JS_invite_num{  margin-left:5px;  color: #ee1f1f; }
+            .content-list .friendInfo{padding-left:220px;}
+            .content-list .friendInfo tr{ margin-bottom:15px;  }
+            .content-list .inboxs{  margin-bottom:15px;  }
+            .content-list .inboxs .inputCon{  padding: 4px 5px; width:150px;  }
+            .content-list .friendLable{  width:120px;  text-align: right;  display: inline-block;  }
+            .content-list .sendIvt{  padding-left:125px;  margin-top:30px;  margin-bottom:20px;  }
+            .content-list .sendIvt input{text-align: center;height: 23px;}
+            .content-list .invite-error{ padding-left: 125px;color:red;}
+            .content-list #sendInvite{ display: block;  width: 80px;  padding: 6px 6px;  margin-bottom: 5px;  background-color: #ed4c4c;  border-radius: 4px;  color: #fff;  text-align: center;}
+        </style>
+        <div class="content-list">
+            <h2 class="c-title">我的邀请</h2>
+            <p class="helpTxt"><span class="i-warn">!</span>您可以推荐你的亲朋好友来美乐乐挑选心仪的商品，为你的好友获取推荐红包，当你的好友的订单完成后，您可以获得对应的金币哟！</p>
+            <div class="inviteInfo">
+                <div class="inBox">已成功邀请人数：<span id="JS_invite_num">{$invite_number} </span>位</div>
+                <form class="friendInfo">
+                    <div class="inboxs">
+                        <span class="friendLable"><span class="stars">* </span>您好友的姓氏：</span>
+                        <input type="text" maxlength="11" class="inputCon" id="friendName">
+                    </div>
+                    <div class="inboxs">
+                        <span class="friendLable"><span class="stars">* </span>性别：</span>
+                <span>
+                    <input type="radio" name="identity_msg" value="0" class="identity"  checked/>先生
+                    <input type="radio" name="identity_msg" value="1" class="identity"/>女士
+                    <input type="radio" name="identity_msg" value="2" class="identity"/>保密
+                </span>
+                    </div>
+                    <div class="inboxs">
+                        <span class="friendLable"><span class="stars">* </span>您好友的手机号：</span>
+                        <input type="text" class="inputCon" id="friendPhone" maxlength="11" />
+                    </div>
+                    <div class="invite-error"></div>
+                    <div class="sendIvt"><div id="sendInvite" class="" >发送邀请</div></div>
+                </form>
+            </div>
+        </div>
+        <script type="text/javascript">
+            window._onReadyList = window._onReadyList || [];
+            window._onReadyList.push(function(){
+                $(document).on('click','#sendInvite',function(){
+                    var name=$('#friendName').val(),
+                            identity = $("input[name='identity_msg']:checked").val(),
+                            phone=$('#friendPhone').val();
+                    if(name==''||phone==''){
+                        $.alert('姓名和电话号码不能为空!');
+//                $('.invite-error').html('注:姓名和电话号码不能为空!')
+                        return false;
+                    }
+                    else if(!(/^0?1[0-9]{10}$/.test(phone))){
+                        $.alert('电话号码输入有误，请检查!');
+//                $('.invite-error').html('注:电话号码输入有误，请检查!')
+                        return false;
+                    }
+                    else{
+                        $(this).attr("disabled",'disabled');
+                        $.ajax({
+                            url:'/solr_api/Order/popularize/send_invitation.do',
+                            data:'familyName='+name+'&gender='+identity+'&mobile='+phone,
+                            type:'post',
+                            dataType: 'json',
+                            success: function(json){
+                                if ( json.error == 0) {//成功被邀请
+                                    //取消蒙版函数
+                                    $.alert('发送成功!',{type:'ok'});
+//                            $.alert('<table class="inviteMsg"><tr><td class="invitemsgT"><span class="invitedNoticeSuc invitedNotice">'+json.msg+'</span></td></tr><tr><td class="closeNotice">5秒钟后页面关闭</td></tr></table>');
+//                            inveteMsg();
+//                            $('body').css('background','#FFF');
+                                    var num  = $('#JS_invite_num');
+                                    num.html(parseInt(num.html()) -0 + 1);
+                                    $('.friendInfo input:text').val('');
+                                }else{//邀请不成功
+                                    $.alert('该手机号已经注册!');
+//                            $.alert('<table class="inviteMsg"><tr><td class="invitemsgT"><span class="invitedNotice">'+json.msg+'</span></td></tr><tr><td class="closeNotice">两秒钟后页面关闭</td></tr></table>');
+//                            inveteMsg();
+                                }
+                            },
+                            error:function(){
+                                $.alert('发生网络错误');
+                            }
+                        })
+                    };
+                });
+            });
+            function inveteMsg(){
+                $('.btns,.icons_td,.htmls > .title').css('display','none');
+                $('.in').css({'border-width':'1px','height':'150px','width':'270px'});
+                setTimeout(function(){
+                    $('#JS_mask,#JS_lightBox_hrfqgb83,.in').css('display','none');
+                },2000000);
+                $('#sendInvite').removeAttr("disabled");
+            }
+        </script></title>
+</head>
+<body>
+
+</body>
+</html>

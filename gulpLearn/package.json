@@ -1,0 +1,17 @@
+{
+  "name": "gulptest",
+  "version": "1.0.0",
+  "description": "my learn about gulp",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "anan",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-less": "^3.1.0",
+    "imagemin-pngquant": "^5.0.0"
+  }
+}

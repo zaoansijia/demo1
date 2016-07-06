@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
+</head>
+<style>
+    table{
+        border-collapse:collapse;
+        margin:0 auto;
+    }
+    #content{
+        background-color: #656565;
+        overflow: hidden;
+        padding:50px;
+        text-align: center;
+    }
+    .swiper {
+        background-image: url('image/swiper.png');
+        background-size: 50% 50%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    table tr td,table tr{
+        width:40px;
+        height: 40px;
+        color: #8c96a0;
+        text-shadow: 1px 1px 1px #fff;
+        border: 1px solid #dce1e6!important;
+        box-shadow: 0 1px 2px #fff inset,0 -1px 0 #a8abae inset;
+        background: -webkit-linear-gradient(top,#f2f3f7,#e4e8ec);
+        text-align: center;
+    }
+
+</style>
+<body>
+    <div id="content"></div>
+<script>
+    var board=[];
+    var num=0;
+    $(document).ready(function(){
+        mytable(9,9,"table","content");
+        //以下是定义一个二维对象数组来记录表格的雷情况
+        for(var i=0;i<11;i++){
+            board[i]=new Array();
+            for(var j=0; j<11; j++){
+                board[i][j] = 0;//初始的时候未填充是0
+            }
+        };
+        //填充雷
+        do{
+            var x=1+Math.round(Math.random()*8);//随机产生一个数，代表行
+            var y=1+Math.round(Math.random()*8);//随机产生一个数，代表列
+            if(board[x][y]==0){
+                board[x][y]="雷";
+                num+=1;
+            }
+        }
+        while(num<10);
+        for(var i=1;i<10;i++){
+            for(var j=1;j<10;j++){
+                if(board[i][j]!='雷'){
+                 var nums=0//这个是来记录周围有几个雷;
+                 if(board[i-1][j-1]=='雷') nums+=1;
+                 if(board[i-1][j]=='雷') nums+=1;
+                 if(board[i-1][j+1]=='雷') nums+=1;
+                 if(board[i][j-1]=='雷') nums+=1;
+                 if(board[i][j+1]=='雷') nums+=1;
+                 if(board[i+1][j-1]=='雷') nums+=1;
+                 if(board[i+1][j]=='雷') nums+=1;
+                 if(board[i+1][j+1]=='雷') nums+=1;
+                 board[i][j]=nums;
+                }
+            }
+        }
+        $('table tr td').on('click',function(){
+            var data=$(this).attr('id').split('_');
+            var x=parseInt(data[0]);
+            var y=parseInt(data[1]);
+            $(this).text(board[x+1][y+1]).css('boxShadow','none');
+            if($(this).text()=='雷'){
+                $(this).addClass('swiper').css('boxShadow','none').text('');
+                alert('game over!!!');
+                for(var i=1;i<10;i++){
+                    for(var j=1;j<10;j++){
+                        $("#"+(i-1)+"_"+(j-1)+"").text(board[i][j]).css('boxShadow','none');
+                        if(board[i][j]=='雷'){
+                            $("#"+(i-1)+"_"+(j-1)+"").addClass('init_swiper').css('boxShadow','none');
+                        }
+                    }
+                };
+                $('.init_swiper').addClass('swiper').text('');
+                return false;
+            }
+            $(this).addClass('not');
+            var reminder_num=parseInt($('#table tr td').length-$('.not').length);
+            if(reminder_num==num){
+                alert('you are superman'
+                )
+            }
+
+            if(board[x+1][y+1]==0){
+                showspace($(this));
+            }
+        });
+    });
+    var mytable=function(row,cell,child,parent){
+        var mytable="<table id="+child+"  border=1 style='border-collapse:collapse;'>";
+        for(var i=0;i<row;i++){
+            mytable+="<tr>";
+            for(var j=0; j<cell; j++){
+                mytable+="<td id="+i+'_'+j+"></td>";
+            }
+            mytable+="</tr>"
+        }
+        mytable+="<table>";
+        $('#'+parent).append(mytable);
+    }
+    var again=function(object){
+        if(object.text()==0){
+            showspace(object);
+        }
+    }
+    var showspace=function(object){
+        var data=object.attr('id').split('_');
+        var x=parseInt(data[0]);
+        var y=parseInt(data[1]);
+        //以点击的td为中心判断九宫格
+        //上左
+        if((x-1)>=0&&(y-1)>=0){
+            var td=$("#"+(x-1)+"_"+(y-1)+"");
+            if(td.text()==''){
+                td.text(board[x][y]).css('boxShadow','none').addClass('not');
+                again(td);
+            }
+        }
+        //上中
+        if((x-1)>=0){
+            var td=$("#"+(x-1)+"_"+y+"");
+            if(td.text()==''){
+                td.text(board[x][y+1]).css('boxShadow','none').addClass('not');
+                again(td);
+            }
+        }
+        //上右
+        if((x-1)>=0&&(y+1)<=8){
+            var td=$("#"+(x-1)+"_"+(y+1)+"");
+            if(td.text()=='') {
+                td.text(board[x][y + 2]).css('boxShadow','none').addClass('not');
+                again(td);
+            }
+        }
+        //中左
+        if((y-1)>=0){
+            var td=$("#"+x+"_"+(y-1)+"");
+            if(td.text()==''){
+                td.text(board[x+1][y]).css('boxShadow','none').addClass('not');
+                again(td);
+            }
+        }
+        //中右
+        if((y+1)<=8){
+            var td=$("#"+x+"_"+(y+1)+"");
+            if(td.text()==''){
+                td.text(board[x+1][y+2]).css('boxShadow','none').addClass('not');
+                again(td);
+
+            }
+        }
+        //下左
+        if((x+1)<=8&&(y-1)>=8){
+            var td=$("#"+(x+1)+"_"+(y-1)+"");
+            if(td.text()==''){
+                td.text(board[x+2][y]).css('boxShadow','none').addClass('not');
+                again(td);
+            }
+        }
+        //下中
+        if((x+1)<=8){
+            var td=$("#"+(x+1)+"_"+y+"");
+            if(td.text()==''){
+                td.text(board[x+2][y+1]).css('boxShadow','none').addClass('not');
+                again(td);
+            }
+        }
+        //下中
+        if((x+1)<=8&&(y+1)<=8){
+            var td=$("#"+(x+1)+"_"+(y+1)+"");
+            if(td.text()==''){
+                td.text(board[x+2][y+2]).css('boxShadow','none').addClass('not');
+                again(td);
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<div><a href="page1.html">link 1</a><a href="page2.html">link 2</a></div>
+<script>
+    (function($){
+        $.fn.showLinkLocation=function(){
+            this.filter('a').append(function(){
+                return "("+this.href+")";//notice the "$(this).attr('href')" difference;
+            });
+            return this;
+        }
+
+    }(jQuery));
+    $('a').showLinkLocation();
+</script>
+</body>
+</html>

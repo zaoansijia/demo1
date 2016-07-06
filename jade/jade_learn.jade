@@ -1,0 +1,25 @@
+//
+   Created by q on 2016/1/7.
+
+head
+    meta(charset='utf-8')
+    title jade learning
+body
+    h2 流程代码
+    h3 for each
+    - var egs={course:'jade',level:'high'}
+    - for (var i in egs)
+        p=egs[i]
+    - each value,key in egs
+        p #{key}: #{value}
+    h3 遍历循环
+    - var egs1=['node','jade','hiii']
+    - each item in egs1
+        p=item
+    h3 嵌套循环
+    - var sections=[{id:1,items:['a','b']},{id:2,items:['c','d']}]
+    dl
+        -each section in sections
+            dt=section.id
+            -each item in section.items
+                dd= item
