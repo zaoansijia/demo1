@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.js"></script>
+    <title>tab change</title>
+    <style>
+        *{padding:0;margin:0;}
+        .content{border: 1px solid grey;display: inline-block;font-size:18px;}
+        #tab{ overflow: hidden; height: 50px; background-color: #666}
+        #tab li{float: left;width:150px;height: 50px;line-height:50px;cursor: pointer;list-style:none; text-align: center;color:#fff; }
+        #tab .current{background-color:red;}
+        #container div{display: none}
+        #container div:first-child{display: block}
+    </style>
+</head>
+<body>
+<div class="content">
+    <ul id="tab">
+        <li class="current">I</li>
+        <li>am</li>
+        <li>an</li>
+    </ul>
+    <div id="container">
+        <div class="current">My name is</div>
+        <div>2222222222</div>
+        <div>333333333</div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        function tabChange(tab,con){
+            this.tab=tab;
+            this.con=con;
+            this.init();
+        }
+        tabChange.prototype={
+            init:function(){
+                var that=this;
+                $(this.tab).each(function(){
+                    $(this).on('mouseover',function(){
+                        $(this).addClass('current').siblings().removeClass('current');
+                        $(that.con).eq($(this).index()).show().siblings().hide();
+                    });
+                });
+            }
+        }
+        new tabChange('#tab>li','#container>div');
+    })
+
+</script>
+
+
+</body>
+</html>
