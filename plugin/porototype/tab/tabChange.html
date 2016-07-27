@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tabChange Plugin</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.js"></script>
+    <script src="tabChange.js"></script>
+    <style>
+        *{padding:0;margin: 0}
+        #tab{border:1px solid #666666;width:600px;height: 500px;}
+        #tab ul{overflow: hidden}
+        #tab ul li{float:left;width:200px;height: 50px;line-height: 50px;list-style:none;text-align: center;background-color: #ddd;}
+        #tab ul li.active{background-color:indianred;}
+        #tab ul li:hover{background: indianred;cursor: pointer}
+        #tab .tab-content .tab-item{display: none;}
+        #tab .tab-content .item-active{display: block;}
+    </style>
+</head>
+<body>
+<div id="tab">
+    <div class="tab-header">
+        <ul>
+            <li class="active">选项卡一</li>
+            <li>选项卡二</li>
+            <li>选项卡三</li>
+        </ul>
+    </div>
+    <div class="tab-content">
+        <div class="tab-item item-active">我是选项卡一</div>
+        <div class="tab-item">我是选项卡二</div>
+        <div class="tab-item">我是选项卡三</div>
+    </div>
+</div>
+<script>
+    $.tabChange({
+        'container' : '#tab',
+        'trigger_event_type' : 'mouseover'
+    });
+
+</script>
+
+
+</body>
+</html>

@@ -2,14 +2,14 @@
  * Created by yangliu2 on 2016/7/5.
  */
 //导入工具包 require('node_modules里对应模块')
-var gulp=require('gulp')//本地安装gulp所用到的地方
-less=require('gulp-less');
-htmlmin=require('gulp-htmlmin');
-imagemin=require('gulp-imagemin');
-pngquant=require('imagemin-pngquant')//深度压缩
-cache=require('gulp-cache');
-cssmin=require('gulp-clean-css');
-rev=require('gulp-rev-append');
+var gulp=require('gulp');//本地安装gulp所用到的地方
+var less=require('gulp-less');
+var htmlmin=require('gulp-htmlmin');
+var imagemin=require('gulp-imagemin');
+var pngquant=require('imagemin-pngquant')//深度压缩
+var cache=require('gulp-cache');
+var cssmin=require('gulp-clean-css');
+var rev=require('gulp-rev-append');
 //给页面引用url添加版本号，以消除页面缓存(未更新version，error)
 gulp.task('testRev',function(){
     gulp.src('src/htmlmin/*html')
@@ -29,9 +29,9 @@ gulp.task('testCssmin',function(){
 })
 //定义一个testLess任务（自定义任务名称）
 gulp.task('testLess',function(){
-    gulp.src('src/less/index.less')//该任务针对的文件
+    gulp.src('newSrc/less/index.less')//该任务针对的文件
         .pipe(less())//该任务调用的模块
-        .pipe(gulp.dest('src/css'));将会在src/CSS下生成css
+        .pipe(gulp.dest('dist/less'));
 });
 //定义testHtmlmin，用于压缩文件
 gulp.task('testHtmlmin',function(){
@@ -46,8 +46,9 @@ gulp.task('testHtmlmin',function(){
     };
     gulp.src('src/htmlmin/index.html')
         .pipe(htmlmin(options))
-        .pipe(gulp.dest('src/html'))
-})
+        .pipe(gulp.dest('src/htmlmin/html'))
+});
+
 //定义testImagemin,用于压缩图片
 /*--gulp.task('testImagemin',function(){
  var options={
@@ -80,7 +81,9 @@ gulp.task('testImagemin',function(){
         })))
         .pipe(gulp.dest('src/img/img'));
 });
-gulp.task('default',['testLess','elseTask']);//定义默认任务为elseTask，该实例而没有elsetask。
+
+//gulp.task('default', gulp.series('testLess'));
+//gulp.task('default',['testLess']);//定义默认任务
 //gulp.task(name[,deps],fn)定义任务 name：任务名；deps：依赖任务名称，fn：回调函数；
 //gulp.src(globs[,options])执行任务处理文件，globs:处理的文件路径（字符串或字符窜数组）
 // gulp.dest(path[,options])处理完文件生成路径

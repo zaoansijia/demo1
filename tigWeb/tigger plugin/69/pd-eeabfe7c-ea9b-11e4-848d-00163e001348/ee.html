@@ -1,0 +1,62 @@
+
+<!doctype html>
+<title>javascript无缝滚动  by 司徒正美</title>
+<meta charset="utf-8"/>
+<meta name="keywords" content="javascript无缝滚动 by 司徒正美" />
+<meta name="description" content="javascript无缝滚动  by 司徒正美" />
+<style type="text/css">
+    h1 {
+        font:400 16px/1 "Microsoft YaHei",KaiTi_GB2312,SimSun
+    }
+    #marquee {
+        position:relative;
+        height:300px;
+        width:200px;
+        overflow:hidden;
+        border:10px solid #369;
+    }
+    #marquee img {
+        display:block;
+    }
+    #marquee dd {
+        margin:0px;
+        padding:0px;
+    }
+</style>
+<script type="text/javascript">
+    var Marquee = function(id){
+        //try{document.execCommand("BackgroundImageCache", false, true);}catch(e){};
+        var container = document.getElementById(id),
+                original = container.getElementsByTagName("dt")[0],
+                clone = container.getElementsByTagName("dd")[0],
+                speed = arguments[1] || 10;
+        clone.innerHTML=original.innerHTML;
+        var rolling = function(){
+            if(container.scrollTop == clone.offsetTop){
+                container.scrollTop = 0;
+            }else{
+                container.scrollTop++;
+            }
+        }
+        var timer = setInterval(rolling,speed)//设置定时器
+        container.onmouseover=function() {clearInterval(timer)}//鼠标移到marquee上时，清除定时器，停止滚动
+        container.onmouseout=function() {timer=setInterval(rolling,speed)}//鼠标移开时重设定时器
+    }
+    window.onload = function(){
+        Marquee("marquee");
+    }
+</script>
+<h1>javascript无缝滚动(向上滚动) by 司徒正美</h1>
+
+<dl id="marquee">
+    <dt>
+        <img src="http://images.cnblogs.com/cnblogs_com/rubylouvre/199042/o_s017.jpg" alt="javascript无缝滚动 by 司徒正美"/>
+        <img src="http://images.cnblogs.com/cnblogs_com/rubylouvre/199042/o_s018.jpg" alt="javascript无缝滚动 by 司徒正美"/>
+        <img src="http://images.cnblogs.com/cnblogs_com/rubylouvre/199042/o_s019.jpg" alt="javascript无缝滚动 by 司徒正美"/>
+        <img src="http://images.cnblogs.com/cnblogs_com/rubylouvre/199042/o_s020.jpg" alt="javascript无缝滚动 by 司徒正美"/>
+        <img src="http://images.cnblogs.com/cnblogs_com/rubylouvre/199042/o_s021.jpg" alt="javascript无缝滚动 by 司徒正美"/>
+        <img src="http://images.cnblogs.com/cnblogs_com/rubylouvre/199042/o_s022.jpg" alt="javascript无缝滚动 by 司徒正美"/>
+        <img src="http://images.cnblogs.com/cnblogs_com/rubylouvre/199042/o_s023.jpg" alt="javascript无缝滚动 by 司徒正美"/>
+    </dt>
+    <dd></dd>
+</dl>

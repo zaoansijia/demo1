@@ -2,17 +2,173 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9a3941a-3201-43a1-9250-b824a06d26b0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gulpLearn/src/cssmin/waterfall.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugin/porototype/tabChange.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/src/css/index.min.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/demo.iml" afterPath="$PROJECT_DIR$/.idea/demo.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/images/investjd.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/images/kefu-1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/images/kefu-2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/images/main.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/images/main2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/images/main2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/images/main3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/images/num.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/images/online.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/images/shopnc.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/images/1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/images/2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/images/3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/images/4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/images/5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/img/machine.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/img/slot1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/img/slot2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/img/slot3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/img/slot4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/img/slot5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/img/slot6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/无缝滚动1/images/1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/无缝滚动1/images/2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/无缝滚动1/images/3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/无缝滚动1/images/4.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/无缝滚动1/images/5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game2/ss.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game_l.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gulpLearn/newSrc/less/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gulpLearn/src/newless/index.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugin/porototype/tab/tabChange.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugin/porototype/tab/tabChange.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/ourtig.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/.idea/.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/.idea/老虎机.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/js/doudong.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/js/jquery-1.8.3.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/js/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num3/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num3/js/indexjs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num3/js/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/.idea/.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/.idea/老虎机—一个jQuery老虎机动画效果插件.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/.jshintrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/index2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/js/jquery-1.8.3.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/js/scroll.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/pd-eeabfe7c-ea9b-11e4-848d-00163e001348/.idea/.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/pd-eeabfe7c-ea9b-11e4-848d-00163e001348/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/pd-eeabfe7c-ea9b-11e4-848d-00163e001348/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/pd-eeabfe7c-ea9b-11e4-848d-00163e001348/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/pd-eeabfe7c-ea9b-11e4-848d-00163e001348/.idea/pd-eeabfe7c-ea9b-11e4-848d-00163e001348.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/pd-eeabfe7c-ea9b-11e4-848d-00163e001348/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/pd-eeabfe7c-ea9b-11e4-848d-00163e001348/ee.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/说明下载.url" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/CONTRIBUTING.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/Gruntfile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/css/reset.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/dd.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/libs/jquery-loader.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/libs/jquery/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/libs/qunit/qunit.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/libs/qunit/qunit.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/slotmachine.jquery.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/src/.jshintrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/src/fff.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/src/jquery.slotmachine.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/test/.jshintrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/test/SlotMachine.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/test/SlotMachine_test.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/无缝滚动1/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/无缝滚动1/index2.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/无缝滚动1/js/jquery-1.8.3.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/无缝滚动1/js/scroll.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/无缝滚动1/说明下载.url" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/browser/css/global-vars/simple.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/browser/css/modify-vars/simple.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/browser/css/postProcessor/postProcessor.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/charsets.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/colors.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/compression/compression.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/empty.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/extend-clearfix.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/extend-exact.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/extend-nest.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/extend-selector.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/extend.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/filemanagerPlugin/filemanager.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/globalVars/extended.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/globalVars/simple.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/ie-filters.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/import-interpolation.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/import-once.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/import-reference-issues.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/import.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/include-path-string/include-path-string.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/include-path/include-path.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/lazy-eval.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/legacy/legacy.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/merge.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/mixins-args.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/mixins-closure.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/mixins-guards.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/mixins-important.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/mixins-named-args.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/mixins-nested.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/mixins-pattern.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/mixins.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/modifyVars/extended.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/no-output.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/no-strict-math/mixins-guards.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/no-strict-math/no-sm-operations.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/operations.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/plugin.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/postProcessorPlugin/postProcessor.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/preProcessorPlugin/preProcessor.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/rulesets.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/scope.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/strict-units/strict-units.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/strings.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/variables-in-at-rules.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/variables.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/visitorPlugin/visitor.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/whitespace.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/less-bom/import-reference-issues/simple-mixin.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/less-bom/import/import-test-d.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/less-bom/sourcemaps/imported.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/less/import-reference-issues/simple-mixin.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/less/import/import-test-d.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/less/sourcemaps/imported.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/src/css/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/src/cssmin/mincss/waterfall.css" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/gulpfile.js" afterPath="$PROJECT_DIR$/gulpLearn/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/accord/package.json" afterPath="$PROJECT_DIR$/gulpLearn/node_modules/accord/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/asap/package.json" afterPath="$PROJECT_DIR$/gulpLearn/node_modules/asap/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/errno/package.json" afterPath="$PROJECT_DIR$/gulpLearn/node_modules/errno/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/fobject/package.json" afterPath="$PROJECT_DIR$/gulpLearn/node_modules/fobject/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/gulp-clean-css/package.json" afterPath="$PROJECT_DIR$/gulpLearn/node_modules/gulp-clean-css/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/gulp-less/package.json" afterPath="$PROJECT_DIR$/gulpLearn/node_modules/gulp-less/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/image-size/package.json" afterPath="$PROJECT_DIR$/gulpLearn/node_modules/image-size/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/indx/package.json" afterPath="$PROJECT_DIR$/gulpLearn/node_modules/indx/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/package.json" afterPath="$PROJECT_DIR$/gulpLearn/node_modules/less/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/lodash/package.json" afterPath="$PROJECT_DIR$/gulpLearn/node_modules/lodash/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/mime/package.json" afterPath="$PROJECT_DIR$/gulpLearn/node_modules/mime/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/promise/package.json" afterPath="$PROJECT_DIR$/gulpLearn/node_modules/promise/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/prr/package.json" afterPath="$PROJECT_DIR$/gulpLearn/node_modules/prr/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/uglify-js/package.json" afterPath="$PROJECT_DIR$/gulpLearn/node_modules/uglify-js/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/when/package.json" afterPath="$PROJECT_DIR$/gulpLearn/node_modules/when/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/package.json" afterPath="$PROJECT_DIR$/gulpLearn/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/src/htmlmin/index.html" afterPath="$PROJECT_DIR$/gulpLearn/src/htmlmin/index.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/js study.html" afterPath="$PROJECT_DIR$/tabChange1.html" />
     </list>
     <ignored path="demo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,11 +189,53 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="basic2.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plugin/lottery/basic2.html">
+      <file leaf-file-name="tabChange.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugin/porototype/tab/tabChange.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.9411764">
-              <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="73" />
+            <state vertical-scroll-proportion="-5.5882354">
+              <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tabChange.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/plugin/porototype/tab/tabChange.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.03591954">
+              <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="basic_plugin.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugin/lottery/basic_plugin.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lottery.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugin/lottery/lottery.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="17.735294">
+              <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="76" />
+              <folding>
+                <marker date="1464683718000" expanded="true" signature="903:984" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="lottery2.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugin/lottery/lottery2.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.264706">
+              <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -46,93 +244,18 @@
       <file leaf-file-name="tabChange.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plugin/porototype/tabChange.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.705882">
-              <caret line="44" column="19" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
+            <state vertical-scroll-proportion="-2.764706">
+              <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gulpLearn/gulpfile.js">
+      <file leaf-file-name="basic2.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/plugin/lottery/basic2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.607142">
-              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-              <folding>
-                <element signature="e#0#43#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/gulpLearn/src/htmlmin/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.32846716">
-              <caret line="9" column="73" selection-start-line="9" selection-start-column="73" selection-end-line="9" selection-end-column="73" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="waterfall.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gulpLearn/src/cssmin/mincss/waterfall.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="waterfall.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gulpLearn/src/cssmin/waterfall.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.264706">
-              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tabChange1.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tabChange1.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.088235">
-              <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#ul#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="btnStyle.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/btnStyle.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="105.882355">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="canvas.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/canvas.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="datatable.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/datatable.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="21.617647">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="-11.470589">
+              <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -146,8 +269,8 @@
         <option value="Html5" />
         <option value="Jade File" />
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -157,12 +280,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/addremove.html" />
-        <option value="$PROJECT_DIR$/到底v.js" />
-        <option value="$PROJECT_DIR$/node/htttp/callback.js" />
-        <option value="$PROJECT_DIR$/node/htttp/async.js" />
-        <option value="$PROJECT_DIR$/node/htttp/event.js" />
-        <option value="$PROJECT_DIR$/node/htttp/scope.js" />
         <option value="$PROJECT_DIR$/node/htttp/context.js" />
         <option value="$PROJECT_DIR$/ghdgfb.html" />
         <option value="$PROJECT_DIR$/ff.html" />
@@ -206,8 +323,14 @@
         <option value="$PROJECT_DIR$/plugin/lottery/basic2.html" />
         <option value="$PROJECT_DIR$/js study.html" />
         <option value="$PROJECT_DIR$/plugin/porototype/tabChange.html" />
-        <option value="$PROJECT_DIR$/gulpLearn/gulpfile.js" />
         <option value="$PROJECT_DIR$/gulpLearn/src/htmlmin/index.html" />
+        <option value="$PROJECT_DIR$/gulpLearn/gulpfile.js" />
+        <option value="$PROJECT_DIR$/game_l.html" />
+        <option value="$PROJECT_DIR$/game2/ss.html" />
+        <option value="$PROJECT_DIR$/tigWeb/ourtig.js" />
+        <option value="$PROJECT_DIR$/hello.html" />
+        <option value="$PROJECT_DIR$/plugin/porototype/tab/tabChange.html" />
+        <option value="$PROJECT_DIR$/plugin/porototype/tab/tabChange.js" />
       </list>
     </option>
   </component>
@@ -217,10 +340,10 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-47" />
-    <option name="y" value="28" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1456" />
-    <option name="height" value="871" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -248,7 +371,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -264,6 +386,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="demo1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tigWeb" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -298,6 +434,32 @@
               <option name="myItemId" value="plugin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="porototype" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tab" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="plugin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lottery" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -328,28 +490,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gulpLearn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newSrc" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="less" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gulpLearn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -391,12 +553,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="game2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -430,18 +593,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\anan\demo1" />
+      <recent name="D:\anan\demo1\gulpLearn\newSrc" />
+      <recent name="D:\anan\demo1\gulpLearn\src\newless" />
       <recent name="D:\anan\demo1\gulpLearn\src\cssmin" />
       <recent name="D:\anan\demo\gulpLearn\src\img" />
-      <recent name="D:\anan\demo\gulpLearn\src\images" />
-      <recent name="D:\demo\games\image" />
-      <recent name="D:\demo" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\anan\demo1" />
       <recent name="D:\demo" />
       <recent name="D:\demo\jade" />
       <recent name="D:\demo\html5" />
       <recent name="D:\demo\game_els1" />
-      <recent name="D:\demo\games" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.mygame_els.html">
@@ -520,13 +683,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-47" y="28" width="1456" height="871" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.025" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19097222" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.018372703" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.018252933" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.024546424" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -568,102 +731,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dateExtractArray.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58664775">
-          <caret line="26" column="72" selection-start-line="26" selection-start-column="72" selection-end-line="26" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gradientTxt.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4971591">
-          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/html5/html5_draggable.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.9411764">
-          <caret line="31" column="30" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OnlineMessage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-25.735294">
-          <caret line="71" column="6" selection-start-line="71" selection-start-column="6" selection-end-line="71" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pageScrollMenu.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.3529415">
-          <caret line="119" column="78" selection-start-line="119" selection-start-column="78" selection-end-line="119" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/select click.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.470588">
-          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/select_change.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.2647057">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/url_parameter.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.823529">
-          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xdc_downloadPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="66" column="94" selection-start-line="66" selection-start-column="53" selection-end-line="66" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/冒泡排序比较.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/image/0.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/方法.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="7" selection-start-line="33" selection-start-column="7" selection-end-line="33" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/error/sorry.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="9" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/waterfall.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -734,32 +801,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulpLearn/src/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpLearn/src/less/index.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gulpLearn/src/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpLearn/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -795,33 +840,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugin/lottery/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugin/lottery/lottery2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugin/lottery/lottery.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-          <folding>
-            <marker date="1464683718000" expanded="true" signature="903:984" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -829,7 +847,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -837,7 +854,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -845,19 +861,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="97" selection-end-column="7" />
-          <folding>
-            <element signature="n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugin/lottery/basic_plugin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -865,15 +868,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/btnStyle.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="105.882355">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -881,13 +875,180 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/datatable.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="21.617647">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpLearn/src/cssmin/waterfall.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.029411">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpLearn/src/htmlmin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32608697">
+          <caret line="9" column="73" selection-start-line="9" selection-start-column="73" selection-end-line="9" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/btnStyle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tabChange1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpLearn/src/less/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.8225806">
+          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpLearn/src/newless/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpLearn/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpLearn/newSrc/less/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game_l.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="14.818841">
+          <caret line="409" column="11" selection-start-line="409" selection-start-column="11" selection-end-line="409" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tigWeb/无缝滚动1/js/scroll.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14367816">
+          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game2/ss.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9478261">
+          <caret line="68" column="9" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpLearn/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.03591954">
+          <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tigWeb/tigger num/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.514493">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tigWeb/tigger num/js/doudong.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.289855">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tigWeb/tigger plugin/test/SlotMachine.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5072464">
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tigWeb/tigger num3/js/indexjs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.11638">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tigWeb/tigger num3/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0434783">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tigWeb/tigger plugin/test/SlotMachine_test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tigWeb/ourtig.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.89285713">
+          <caret line="410" column="11" selection-start-line="410" selection-start-column="11" selection-end-line="410" selection-end-column="11" />
+          <folding>
+            <marker date="1469518117182" expanded="true" signature="583:596" placeholder="..." />
+            <marker date="1469518117182" expanded="true" signature="850:863" placeholder="..." />
+            <marker date="1469518117182" expanded="true" signature="1119:1132" placeholder="..." />
+            <marker date="1469518117182" expanded="true" signature="1384:1397" placeholder="..." />
+            <marker date="1469518117182" expanded="true" signature="12590:12603" placeholder="..." />
+            <marker date="1469518117182" expanded="true" signature="12835:12894" placeholder="..." />
+            <marker date="1469518117182" expanded="true" signature="12955:13062" placeholder="..." />
+            <marker date="1469518117182" expanded="true" signature="15096:15109" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tigWeb/tigger plugin/src/jquery.slotmachine.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.71695405">
+          <caret line="562" column="6" selection-start-line="562" selection-start-column="6" selection-end-line="562" selection-end-column="6" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tigWeb/tigger plugin/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.92753625">
+          <caret line="233" column="64" selection-start-line="233" selection-start-column="64" selection-end-line="233" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugin/lottery/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.123188406">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -895,61 +1056,58 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plugin/lottery/basic2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.9411764">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="73" />
+        <state vertical-scroll-proportion="-11.470589">
+          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tabChange1.html">
+    <entry file="file://$PROJECT_DIR$/plugin/lottery/lottery2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.088235">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+        <state vertical-scroll-proportion="-9.264706">
+          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugin/lottery/lottery.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="17.735294">
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="76" />
           <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ul#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1464683718000" expanded="true" signature="903:984" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugin/porototype/tabChange.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.705882">
-          <caret line="44" column="19" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
+        <state vertical-scroll-proportion="-2.764706">
+          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulpLearn/src/cssmin/waterfall.css">
+    <entry file="file://$PROJECT_DIR$/plugin/lottery/basic_plugin.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.264706">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpLearn/src/cssmin/mincss/waterfall.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulpLearn/gulpfile.js">
+    <entry file="file://$PROJECT_DIR$/plugin/porototype/tab/tabChange.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.607142">
-          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="-5.5882354">
+          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulpLearn/src/htmlmin/index.html">
+    <entry file="file://$PROJECT_DIR$/plugin/porototype/tab/tabChange.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32846716">
-          <caret line="9" column="73" selection-start-line="9" selection-start-column="73" selection-end-line="9" selection-end-column="73" />
+        <state vertical-scroll-proportion="0.03591954">
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
           <folding />
         </state>
       </provider>

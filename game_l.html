@@ -1,0 +1,426 @@
+
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<head>
+    <title></title>
+</head>
+<style type="text/css">
+    /* === CSS Reset ========== */
+    body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, blockquote, th, td, p { margin:0; padding:0 }
+    input, button, select, textarea, a:fouse {outline:none}
+    li {list-style:none;}
+    img {border:none;}
+    textarea {resize:none;}
+    body {margin:0;font: 12px "微软雅黑"; background: #feecd4;}
+    /* === End CSS Reset ========== */
+
+    body{
+        min-width: 1000px;
+        _width:expression((document.documentElement.clientWidth||document.body.clientWidth)<950?"950px":"");
+    }
+    a{
+        text-decoration: none;
+    }
+    .clearfix:after {
+        visibility: hidden;
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        height: 0;
+    }
+    .clearfix{*zoom:1;}
+
+    .container{
+        width: 1000px;
+        margin: 0 auto;
+        position: relative;
+        /*height: 198px;*/
+    }
+
+    /* 头部 */
+    /*.main{
+        background: url("images/main.jpg") no-repeat center;
+        background: #feecd4;
+        height: 351px;
+        _width:expression((document.documentElement.clientWidth||document.body.clientWidth)<1000?"1000px":"");
+    }*/
+    .main2{
+        background: url("images/main2.png") no-repeat center;
+
+        height: 689px;
+        _width:expression((document.documentElement.clientWidth||document.body.clientWidth)<1000?"1000px":"");
+        /*最小宽度*/
+    }
+    .main3{
+        /*background: url("images/main3.jpg") no-repeat center;
+        height: 381px;*/
+        _width:expression((document.documentElement.clientWidth||document.body.clientWidth)<1000?"1000px":"");
+    }
+    .main3-text{
+        color:#744b00;
+        font-size: 23px;
+        font-weight: bold;
+        position: absolute;
+        left: 74px;
+        top: 210px;
+    }
+    .main3-text2{
+        color:#744b00;
+        font-size: 14px;
+        position: absolute;
+        left: 74px;
+        top: 254px;
+        line-height: 22px;
+        width: 867px;
+    }
+    .main-text{
+        position: absolute;
+        left: 360px;
+        top: 325px;
+        color:#b03b01;
+        font-size: 16px;
+    }
+    .main2-text1{
+        position: absolute;
+        left: 79px;
+        top: 45px;
+        color:#ffffff;
+        font-size: 16px;
+    }
+    .main2-text2{
+        position: absolute;
+        left: 69px;
+        top: 67px;
+        color:#ffffff;
+        font-size: 23px;
+        font-weight: bold;
+    }
+    .main2-text2 span{
+        color:#ffff00;
+    }
+    .main2-text3{
+        position: absolute;
+        left: 69px;
+        top: 97px;
+        color:#ffffff;
+        font-size: 18px;
+    }
+    .main2-text4{
+        position: absolute;
+        left: 382px;
+        top: 34px;
+        color:#ffffff;
+        font-size: 18px;
+    }
+    .main2-text4 span{
+        color:#ffe700;
+        font-weight: bold;
+    }
+    .main2-text5{
+        position: absolute;
+        left: 665px;
+        top: 34px;
+        color:#ffffff;
+        font-size: 18px;
+    }
+    .main2-text5 span{
+        color:#ffe700;
+        font-weight: bold;
+    }
+    .num{
+        position: absolute;
+        left: 248px;
+        top: 171px;
+        width: 124px;
+        height: 198px;
+        overflow: hidden;
+    }
+    .num-con{
+        position: relative;
+        top:-430px;
+    }
+    .num-img{
+        background: url("images/num.png") no-repeat;
+        width: 124px;
+        height: 1298px;
+        margin-bottom: 4px;
+    }
+    .num2{
+        left: 399px;
+    }
+    .num3{
+        left: 551px;
+    }
+
+    .main3-btn{
+        width: 307px;
+        height: 95px;
+        position: absolute;
+        left: 313px;
+        top: -290px;
+        cursor: pointer;
+    }
+</style>
+<body>
+<!-- <div class="main" title="赢5000元，为五一长假准备起来，10-50万出行保额任你转">
+	<div class="container">
+		<div class="main-text"><strong>活动时间：</strong>2015年4月1日-5月20日</div>
+	</div>
+</div> -->
+<div class="main2">
+    <div class="container">
+        <!-- <div class="main2-text1">五一拼假有讲究，还没有人告诉你？</div>
+        <div class="main2-text2">
+            <span>请4天得9天假</span>，攻略奉上
+        </div>
+        <div class="main2-text3">赶紧为你的假期准备起来吧！</div>
+        <div class="main2-text4">
+            时间有了，<br>
+            <span>旅游资金呢？出行保障呢？</span>
+        </div>
+        <div class="main2-text5">
+            Come on，<span>一站式为您搞定</span><br>
+            请叫我红领巾！
+        </div> -->
+        <div class="num num1">
+            <div class="num-con num-con1">
+                <div class="num-img"></div>
+                <div class="num-img"></div>
+            </div>
+        </div>
+        <div class="num num2">
+            <div class="num-con num-con2">
+                <div class="num-img"></div>
+                <div class="num-img"></div>
+            </div>
+        </div>
+        <div class="num num3">
+            <div class="num-con num-con3">
+                <div class="num-img"></div>
+                <div class="num-img"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main3">
+    <div class="container">
+        <div class="main3-btn"></div>
+
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript"  src="js/jquery.js"></script>
+<script type="text/javascript">
+    // $(function(){
+    // 	init();
+
+    // 	var iframe = document.getElementById("submitiframe");
+    // 	if (iframe.attachEvent) {
+    // 		iframe.attachEvent("onload", function() {
+
+    // 				var res = iframe.contentWindow.document.documentElement.outerHTML;
+    // 				if (res.indexOf("200") >= 0) {
+    // 					clearform();
+    // 					$(".pop-form").hide();
+    // 					$(".success-con").show();
+    // 				}
+
+    // 		});
+    // 	} else {
+    // 		iframe.onload = function() {
+    // 			var res = iframe.contentWindow.document.documentElement.outerHTML;
+    // 			if (res.indexOf("200") >= 0) {
+    // 					clearform();
+    // 					$(".pop-form").hide();
+    // 					$(".success-con").show();
+    // 			}
+    // 		};
+    // 	}
+
+
+
+    // });
+    // function init(){
+    // 	var host = location.host;
+    // 	var turl = "http://" + host +  "/hd/aio/thanks/get.php";
+    // 	var qdh = getUrlParam("qdh");
+    // 	var cc = getUrlParam("cc");
+    // 	var campaign = getUrlParam("campaign");
+    // 	var ccode = cc ? cc : campaign;
+    // 	var iq_id = getUrlParam("iq_id");
+    // 	var iq_id = (iq_id.replace(/(^\s*)|(\s*$)/g, "").length != 0) ? iq_id	: 'C20150319';
+    // 	$("#url").val(turl);
+    // 	$("#iqId").val(iq_id);
+
+    // 	if (ccode){
+    // 		$("#campaignCode").val(ccode);
+
+    // 	} else {
+    // 		$("#campaignCode").val('1LDG175CA6');
+
+    // 	}
+
+    // 	if (host.indexOf(".cigna") > 0) {
+    // 		document.myform.action = "http://LG.cignacmb.com/cmc-lg/formCmc2Action_saveForm.action";
+    // 	} else {
+    // 		document.myform.action = "http://10.140.5.69/cmc-lg/formCmc2Action_saveForm.action";
+    // 	}
+    // }
+
+    // function getUrlParam(name) {
+    // 	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    // 	var r = window.location.search.substr(1).match(reg);
+    // 	if (r != null)
+    // 		return unescape(r[2]);
+    // 	return '';
+    // }
+    // //提交用户选择内容
+    // $(".pop-form-btn").click(function () {
+    //   var name = $("#name").val();
+    //   name = name.replace(/(^\s*)|(\s*$)/, "");
+    //   if (name.length >= 25 || name.length < 1)
+    //      {
+    // 	  layer.tips('请输入合法的姓名', $("#name") , {guide: 0,time: 3, style: ['background-color:#3fa7e9; color:#fff', '#3fa7e9']});
+    // 	  return;
+    //   }
+
+    //   var sex=$(".sex-con :radio:checked").length
+    //   if(!sex)
+    //      {
+    // 	layer.tips('请选择性别', $(".sex-con") , {guide: 0, time: 3,style: ['background-color:#3fa7e9; color:#fff', '#3fa7e9']});
+    // 	return;
+    //   }
+
+    // 	var area=$(".area-text").text();
+    // 	if(area=="请选择")
+    // 	{
+    // 		layer.tips('请选择所在地', $(".area-text") , {guide: 0, time: 3,style: ['background-color:#3fa7e9; color:#fff', '#3fa7e9']});
+    // 		return;
+    // 	}
+
+    //   var m1 = /^(1[3578][0-9]|14[57])\d{8}$/;
+    //   var mobile = $("#mobile").val();
+    //   mobile = mobile.replace(/(^\s*)|(\s*$)/, "");
+    //   if(!mobile.length)
+    //      {
+    // 	layer.tips('请填写您的手机号码', $("#mobile") , {guide: 0, time: 3,style: ['background-color:#3fa7e9; color:#fff', '#3fa7e9']});
+    // 	return;
+    //   }
+    //   if (!(m1.test(mobile)))
+    //      {
+    // 	layer.tips('请输入正确的电话号码', $("#mobile") , {guide: 0, time: 3,style: ['background-color:#3fa7e9; color:#fff', '#3fa7e9']});
+    // 	$("#mobile").focus();
+    // 	return;
+    //   }
+    //   var remark = $(".pop-text span").text()+"万";
+    //   $("#remark").val(remark);
+    //   $('#myform')[0].submit();
+    // 	$(".pop-form").hide();
+    // 	$(".success-con").show();
+
+    // })
+
+    // $(".success-ok,.success-close").click(function () {
+    // 	$(".success-con,.fix").hide();
+    // })
+
+    // $(".area").on("click",function(e){
+    //   $(this).find(".area-list").toggle();
+    // });
+
+    // $(".area-item").on("click",function(e){
+    //   $(".area-text").text($(this).text());
+    //   $('#province').val($(this).text());
+    //   $(".area-list").hide();
+    //   return false;
+    // })
+
+    // $(document).on("click",function(e){
+    // 	if(!$(e.target).closest(".area").length)
+    //        {
+    // 	  $(".area-list").hide();
+    // 	}
+    // });
+
+
+    // $(".pop-form-close").click(function () {
+    // 	$(".fix,.pop-form").hide();
+    // })
+
+    // $(".pop-close-icon").click(function () {
+    // 	$(".fix,.pop").hide();
+    // })
+
+    // //满足了
+    // $(".pop-close").click(function () {
+    // 	$(".pop").hide();
+    // 	$(".fix,.pop-form").show();
+    // })
+
+    // //再来一发
+    // $(".pop-ok").click(function () {
+    // 	$(".fix,.pop").hide();
+    // 	$(".main3-btn").click();
+    // })
+
+    $(".main3-btn").click(function () {
+        if(!flag){
+            flag=true;
+            reset();
+            letGo();
+            setTimeout(function () {
+                flag=false;
+                if(index==2){
+                    $(".fix,.pop-form").show();
+                }else{
+                    $(".fix,.pop").show();
+                    $(".pop-text span").text(""+String(4-TextNum1)+(8-TextNum2))
+                }
+            },4000);
+            index++;
+        }
+    });
+
+    var flag=false;
+    var index=0;
+    var TextNum1
+    var TextNum2
+    var TextNum3
+
+    function letGo(){
+
+        TextNum1=parseInt(Math.random()*4)//随机数
+        TextNum2=parseInt(Math.random()*7)
+        TextNum3=parseInt(Math.random()*7)
+
+        var num1=[-549,-668,-786,-904][TextNum1];//在这里随机
+        var num2=[-1377,-1495,-1614,-430,-549,-668,-786,-904][TextNum2];
+        var num3=[-1377,-1495,-1614,-430,-549,-668,-786,-904][TextNum3];
+        $(".num-con1").animate({"top":-1140},1000,"linear", function () {
+            $(this).css("top",0).animate({"top":num1},1000,"linear");
+        });
+        $(".num-con2").animate({"top":-1140},1000,"linear", function () {
+            $(this).css("top",0).animate({"top":num2},1800,"linear");
+        });
+        $(".num-con3").animate({"top":-1140},1000,"linear", function () {
+            $(this).css("top",0).animate({"top":num3},1300,"linear");
+        });
+
+    }
+
+    function reset(){
+        $(".num-con1,.num-con2,.num-con3").css({"top":-430});
+    }
+
+    // function clearform(){
+    //     $('#name').val("");
+    // 	$('#province').val("");
+    // 	$('#mobile').val("");
+    // 	$('#remark').val("");
+    // 	$('.area-text').html('请选择');
+    // 	$(".sex-con label input").attr("checked",false);
+    // }
+</script>
