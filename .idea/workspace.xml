@@ -2,173 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9a3941a-3201-43a1-9250-b824a06d26b0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/images/investjd.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/images/kefu-1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/images/kefu-2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/images/main.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/images/main2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/images/main2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/images/main3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/images/num.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/images/online.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/images/shopnc.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/images/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/images/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/images/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/images/4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/images/5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/img/machine.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/img/slot1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/img/slot2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/img/slot3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/img/slot4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/img/slot5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/img/slot6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/无缝滚动1/images/1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/无缝滚动1/images/2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/无缝滚动1/images/3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/无缝滚动1/images/4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/无缝滚动1/images/5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game2/ss.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/game_l.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gulpLearn/newSrc/less/index.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gulpLearn/src/newless/index.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugin/porototype/tab/tabChange.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plugin/porototype/tab/tabChange.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/ourtig.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/.idea/老虎机.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/js/doudong.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/js/jquery-1.8.3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num/js/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num3/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num3/js/indexjs.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger num3/js/jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/.idea/老虎机—一个jQuery老虎机动画效果插件.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/index2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/js/jquery-1.8.3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/js/scroll.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/pd-eeabfe7c-ea9b-11e4-848d-00163e001348/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/pd-eeabfe7c-ea9b-11e4-848d-00163e001348/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/pd-eeabfe7c-ea9b-11e4-848d-00163e001348/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/pd-eeabfe7c-ea9b-11e4-848d-00163e001348/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/pd-eeabfe7c-ea9b-11e4-848d-00163e001348/.idea/pd-eeabfe7c-ea9b-11e4-848d-00163e001348.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/pd-eeabfe7c-ea9b-11e4-848d-00163e001348/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/pd-eeabfe7c-ea9b-11e4-848d-00163e001348/ee.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/69/说明下载.url" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/CONTRIBUTING.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/Gruntfile.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/css/reset.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/css/style.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/dd.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/libs/jquery-loader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/libs/jquery/jquery.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/libs/qunit/qunit.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/libs/qunit/qunit.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/slotmachine.jquery.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/src/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/src/fff.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/src/jquery.slotmachine.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/test/.jshintrc" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/test/SlotMachine.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/tigger plugin/test/SlotMachine_test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/无缝滚动1/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/无缝滚动1/index2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/无缝滚动1/js/jquery-1.8.3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/无缝滚动1/js/scroll.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tigWeb/无缝滚动1/说明下载.url" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/browser/css/global-vars/simple.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/browser/css/modify-vars/simple.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/browser/css/postProcessor/postProcessor.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/charsets.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/colors.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/compression/compression.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/empty.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/extend-clearfix.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/extend-exact.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/extend-nest.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/extend-selector.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/extend.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/filemanagerPlugin/filemanager.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/globalVars/extended.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/globalVars/simple.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/ie-filters.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/import-interpolation.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/import-once.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/import-reference-issues.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/import.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/include-path-string/include-path-string.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/include-path/include-path.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/lazy-eval.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/legacy/legacy.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/merge.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/mixins-args.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/mixins-closure.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/mixins-guards.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/mixins-important.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/mixins-named-args.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/mixins-nested.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/mixins-pattern.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/mixins.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/modifyVars/extended.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/no-output.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/no-strict-math/mixins-guards.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/no-strict-math/no-sm-operations.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/operations.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/plugin.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/postProcessorPlugin/postProcessor.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/preProcessorPlugin/preProcessor.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/rulesets.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/scope.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/strict-units/strict-units.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/strings.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/variables-in-at-rules.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/variables.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/visitorPlugin/visitor.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/css/whitespace.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/less-bom/import-reference-issues/simple-mixin.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/less-bom/import/import-test-d.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/less-bom/sourcemaps/imported.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/less/import-reference-issues/simple-mixin.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/less/import/import-test-d.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/test/less/sourcemaps/imported.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/src/css/index.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpLearn/src/cssmin/mincss/waterfall.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/gulpfile.js" afterPath="$PROJECT_DIR$/gulpLearn/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/accord/package.json" afterPath="$PROJECT_DIR$/gulpLearn/node_modules/accord/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/asap/package.json" afterPath="$PROJECT_DIR$/gulpLearn/node_modules/asap/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/errno/package.json" afterPath="$PROJECT_DIR$/gulpLearn/node_modules/errno/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/fobject/package.json" afterPath="$PROJECT_DIR$/gulpLearn/node_modules/fobject/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/gulp-clean-css/package.json" afterPath="$PROJECT_DIR$/gulpLearn/node_modules/gulp-clean-css/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/gulp-less/package.json" afterPath="$PROJECT_DIR$/gulpLearn/node_modules/gulp-less/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/image-size/package.json" afterPath="$PROJECT_DIR$/gulpLearn/node_modules/image-size/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/indx/package.json" afterPath="$PROJECT_DIR$/gulpLearn/node_modules/indx/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/less/package.json" afterPath="$PROJECT_DIR$/gulpLearn/node_modules/less/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/lodash/package.json" afterPath="$PROJECT_DIR$/gulpLearn/node_modules/lodash/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/mime/package.json" afterPath="$PROJECT_DIR$/gulpLearn/node_modules/mime/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/promise/package.json" afterPath="$PROJECT_DIR$/gulpLearn/node_modules/promise/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/prr/package.json" afterPath="$PROJECT_DIR$/gulpLearn/node_modules/prr/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/uglify-js/package.json" afterPath="$PROJECT_DIR$/gulpLearn/node_modules/uglify-js/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/node_modules/when/package.json" afterPath="$PROJECT_DIR$/gulpLearn/node_modules/when/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpLearn/package.json" afterPath="$PROJECT_DIR$/gulpLearn/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugin/porototype/tab/tabChange.html" afterPath="$PROJECT_DIR$/plugin/porototype/tab/tabChange.html" />
     </list>
     <ignored path="demo.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -189,20 +23,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="tabChange.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="tabChange.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plugin/porototype/tab/tabChange.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.5882354">
-              <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.2753623">
+              <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tabChange.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="tabChange.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plugin/porototype/tab/tabChange.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.03591954">
+            <state vertical-scroll-proportion="4.607143">
               <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
               <folding />
             </state>
@@ -329,8 +163,8 @@
         <option value="$PROJECT_DIR$/game2/ss.html" />
         <option value="$PROJECT_DIR$/tigWeb/ourtig.js" />
         <option value="$PROJECT_DIR$/hello.html" />
-        <option value="$PROJECT_DIR$/plugin/porototype/tab/tabChange.html" />
         <option value="$PROJECT_DIR$/plugin/porototype/tab/tabChange.js" />
+        <option value="$PROJECT_DIR$/plugin/porototype/tab/tabChange.html" />
       </list>
     </option>
   </component>
@@ -379,184 +213,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tigWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="porototype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="porototype" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tab" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lottery" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gulpLearn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gulpLearn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gulpLearn" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="newSrc" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="less" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gameWeb" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="games" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="demo1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="game2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -566,7 +222,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tabChangePlugin" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -1096,18 +752,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugin/porototype/tab/tabChange.html">
+    <entry file="file://$PROJECT_DIR$/plugin/porototype/tab/tabChange.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.5882354">
-          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+        <state vertical-scroll-proportion="4.607143">
+          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugin/porototype/tab/tabChange.js">
+    <entry file="file://$PROJECT_DIR$/plugin/porototype/tab/tabChange.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03591954">
-          <caret line="1" column="14" selection-start-line="1" selection-start-column="14" selection-end-line="1" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.2753623">
+          <caret line="23" column="25" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
           <folding />
         </state>
       </provider>

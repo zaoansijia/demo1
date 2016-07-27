@@ -7,12 +7,12 @@
     <script src="tabChange.js"></script>
     <style>
         *{padding:0;margin: 0}
-        #tab{border:1px solid #666666;width:600px;height: 500px;}
+        #tab{border:1px solid #666666;width:600px;height: 200px;margin: 50px auto 0;}
         #tab ul{overflow: hidden}
         #tab ul li{float:left;width:200px;height: 50px;line-height: 50px;list-style:none;text-align: center;background-color: #ddd;}
         #tab ul li.active{background-color:indianred;}
         #tab ul li:hover{background: indianred;cursor: pointer}
-        #tab .tab-content .tab-item{display: none;}
+        #tab .tab-content .tab-item{display: none;text-align: center;padding-top:50px;}
         #tab .tab-content .item-active{display: block;}
     </style>
 </head>
@@ -20,15 +20,15 @@
 <div id="tab">
     <div class="tab-header">
         <ul>
-            <li class="active">选项卡一</li>
-            <li>选项卡二</li>
-            <li>选项卡三</li>
+            <li class="active">Tab1</li>
+            <li>Tab2</li>
+            <li>Tab3</li>
         </ul>
     </div>
     <div class="tab-content">
-        <div class="tab-item item-active">我是选项卡一</div>
-        <div class="tab-item">我是选项卡二</div>
-        <div class="tab-item">我是选项卡三</div>
+        <div class="tab-item item-active">I'm tab1.ye,it's one;</div>
+        <div class="tab-item">I'm tab2.ye,it's two;</div>
+        <div class="tab-item">I'm tab3.ye,it's three;</div>
     </div>
 </div>
 <script>
