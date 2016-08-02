@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>winMine</title>
     <script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
 </head>
 <style>
@@ -16,7 +16,7 @@
         padding:50px;
         text-align: center;
     }
-    .swiper {
+    .shot {
         background-image: url('image/swiper.png');
         background-size: 50% 50%;
         background-repeat: no-repeat;
@@ -39,159 +39,206 @@
 <script>
     var board=[];
     var num=0;
-    $(document).ready(function(){
-        mytable(9,9,"table","content");
-        //以下是定义一个二维对象数组来记录表格的雷情况
-        for(var i=0;i<11;i++){
-            board[i]=new Array();
-            for(var j=0; j<11; j++){
-                board[i][j] = 0;//初始的时候未填充是0
+    $(document).ready(function () {
+        setTable(9,9,"table","content");
+        
+        //declare a array to record the 'mine'
+        for( var i=0 ; i<11 ; i++ ) {
+            board[i]=[];
+            for( var j=0; j<11; j++ ) {
+                board[i][j] = 0;//init the space the '0'
             }
         };
-        //填充雷
-        do{
-            var x=1+Math.round(Math.random()*8);//随机产生一个数，代表行
-            var y=1+Math.round(Math.random()*8);//随机产生一个数，代表列
-            if(board[x][y]==0){
-                board[x][y]="雷";
+
+        //fill 'mine'
+        do {
+            var x = 1+Math.round(Math.random()*8);//random a num to represent the rows;
+            var y = 1+Math.round(Math.random()*8);//random a num to represent the columns;
+            if( board[x][y]==0 ) {
+                board[x][y]="mine";
                 num+=1;
             }
-        }
-        while(num<10);
-        for(var i=1;i<10;i++){
-            for(var j=1;j<10;j++){
-                if(board[i][j]!='雷'){
-                 var nums=0//这个是来记录周围有几个雷;
-                 if(board[i-1][j-1]=='雷') nums+=1;
-                 if(board[i-1][j]=='雷') nums+=1;
-                 if(board[i-1][j+1]=='雷') nums+=1;
-                 if(board[i][j-1]=='雷') nums+=1;
-                 if(board[i][j+1]=='雷') nums+=1;
-                 if(board[i+1][j-1]=='雷') nums+=1;
-                 if(board[i+1][j]=='雷') nums+=1;
-                 if(board[i+1][j+1]=='雷') nums+=1;
+        } while(num<10);
+
+        for( var i=1; i<10; i++ ) {
+
+            for( var j=1; j<10; j++ ) {
+                var nums=0//to account the number of 'mine'
+
+                if( board[i][j]!='mine' ){
+
+                 if(board[i-1][j-1]=='mine') nums+=1;
+                 if(board[i-1][j]=='mine') nums+=1;
+                 if(board[i-1][j+1]=='mine') nums+=1;
+                 if(board[i][j-1]=='mine') nums+=1;
+                 if(board[i][j+1]=='mine') nums+=1;
+                 if(board[i+1][j-1]=='mine') nums+=1;
+                 if(board[i+1][j]=='mine') nums+=1;
+                 if(board[i+1][j+1]=='mine') nums+=1;
+
                  board[i][j]=nums;
                 }
             }
         }
-        $('table tr td').on('click',function(){
-            var data=$(this).attr('id').split('_');
-            var x=parseInt(data[0]);
-            var y=parseInt(data[1]);
-            $(this).text(board[x+1][y+1]).css('boxShadow','none');
-            if($(this).text()=='雷'){
-                $(this).addClass('swiper').css('boxShadow','none').text('');
+        $('table tr td').on( 'click' , function() {
+
+            var data = $(this).attr('id').split('_');
+            var x = parseInt(data[0]);
+            var y = parseInt(data[1]);
+            var reminder_num=parseInt($('#table tr td').length-$('.not').length);
+            console.log(board)
+            console.log(board[x][y])
+
+            $(this).text( board[x][y] ).css('boxShadow','none');
+
+            //game over
+            if( $(this).text()=='mine' ) {
+                $(this).addClass('shot').css('boxShadow','none').text('');
                 alert('game over!!!');
-                for(var i=1;i<10;i++){
-                    for(var j=1;j<10;j++){
-                        $("#"+(i-1)+"_"+(j-1)+"").text(board[i][j]).css('boxShadow','none');
-                        if(board[i][j]=='雷'){
-                            $("#"+(i-1)+"_"+(j-1)+"").addClass('init_swiper').css('boxShadow','none');
+
+                for( var i=1;i<10;i++ ) {
+                    for( var j=1;j<10;j++ ) {
+
+                        $("#"+i+"_"+j+"").text(board[i][j]).css('boxShadow','none');
+                        if( board[i][j]=='mine' ) {
+                            $("#"+i+"_"+j+"").addClass('init_swiper').css('boxShadow','none');
                         }
                     }
                 };
-                $('.init_swiper').addClass('swiper').text('');
+
+                $('.init_swiper').addClass('shot').text('');
                 return false;
             }
             $(this).addClass('not');
-            var reminder_num=parseInt($('#table tr td').length-$('.not').length);
-            if(reminder_num==num){
-                alert('you are superman'
-                )
-            }
 
-            if(board[x+1][y+1]==0){
-                showspace($(this));
+            //got it
+            if( reminder_num==num ){
+                alert('you are superman')
+            };
+
+            if(board[x][y]==0){
+                showText($(this));
             }
         });
     });
-    var mytable=function(row,cell,child,parent){
-        var mytable="<table id="+child+"  border=1 style='border-collapse:collapse;'>";
-        for(var i=0;i<row;i++){
-            mytable+="<tr>";
-            for(var j=0; j<cell; j++){
-                mytable+="<td id="+i+'_'+j+"></td>";
+
+    var setTable = function setTable(row,cell,child,parent){
+        var table='';
+        table += "<table id="+child+"  border=1 style='border-collapse:collapse;'>";
+
+        for( var i=1 ; i<=row ; i++ ) {
+            table += "<tr>";
+            for( var j=1 ; j<=cell ; j++ ) {
+                table += "<td id="+i+'_'+j+"></td>";
             }
-            mytable+="</tr>"
+            table += "</tr>"
         }
-        mytable+="<table>";
-        $('#'+parent).append(mytable);
+
+        table += "<table>";
+        $('#'+parent).append(table);
     }
-    var again=function(object){
-        if(object.text()==0){
-            showspace(object);
+    
+    var scanAgain = function scanAgain(object){
+        if( object.text()== '0' ) {
+            showText(object);
         }
     }
-    var showspace=function(object){
-        var data=object.attr('id').split('_');
+    var showText = function( object ) {
         var x=parseInt(data[0]);
         var y=parseInt(data[1]);
-        //以点击的td为中心判断九宫格
-        //上左
-        if((x-1)>=0&&(y-1)>=0){
-            var td=$("#"+(x-1)+"_"+(y-1)+"");
-            if(td.text()==''){
-                td.text(board[x][y]).css('boxShadow','none').addClass('not');
-                again(td);
-            }
-        }
-        //上中
-        if((x-1)>=0){
-            var td=$("#"+(x-1)+"_"+y+"");
-            if(td.text()==''){
-                td.text(board[x][y+1]).css('boxShadow','none').addClass('not');
-                again(td);
-            }
-        }
-        //上右
-        if((x-1)>=0&&(y+1)<=8){
-            var td=$("#"+(x-1)+"_"+(y+1)+"");
-            if(td.text()=='') {
-                td.text(board[x][y + 2]).css('boxShadow','none').addClass('not');
-                again(td);
-            }
-        }
-        //中左
-        if((y-1)>=0){
-            var td=$("#"+x+"_"+(y-1)+"");
-            if(td.text()==''){
-                td.text(board[x+1][y]).css('boxShadow','none').addClass('not');
-                again(td);
-            }
-        }
-        //中右
-        if((y+1)<=8){
-            var td=$("#"+x+"_"+(y+1)+"");
-            if(td.text()==''){
-                td.text(board[x+1][y+2]).css('boxShadow','none').addClass('not');
-                again(td);
+        //According to 'td' which clicked to judge the center squares
+        var array=[
+            {'x':(x-1),'y':(y-1)},//top_left
+            {'x':(x-1),'y':y},//top_middle
+            {'x':(x-1),'y':(y+1)},//top_right
+            {'x':x,'y':(y-1)},//middle_left
+            {'x':x,'y':(y+1)},//middle_right
+            {'x':(x+1),'y':(y-1)},//bottom_left
+            {'x':(x+1),'y':y},//bottom_middle
+            {'x':(x+1),'y':(y+1)},//bottom_right
 
+        ]
+
+
+        for( var i=0; i<array.length; i++ ) {
+            if( sqr[i].x>=1 && sqr[i].x<=9 && sqr[i].y>=1 && sqr[i].y<=9){
+                var td=$("#"+sqr[i].x+"_"+sqr[i].x+"");
+                if( td.text()=='' ) {
+                    td.text(board[sqr[i].x][sqr[i].x]).css('boxShadow','none').addClass('not');
+                    scanAgain(td);
+                }
             }
         }
-        //下左
-        if((x+1)<=8&&(y-1)>=8){
-            var td=$("#"+(x+1)+"_"+(y-1)+"");
-            if(td.text()==''){
-                td.text(board[x+2][y]).css('boxShadow','none').addClass('not');
-                again(td);
-            }
-        }
-        //下中
-        if((x+1)<=8){
-            var td=$("#"+(x+1)+"_"+y+"");
-            if(td.text()==''){
-                td.text(board[x+2][y+1]).css('boxShadow','none').addClass('not');
-                again(td);
-            }
-        }
-        //下中
-        if((x+1)<=8&&(y+1)<=8){
-            var td=$("#"+(x+1)+"_"+(y+1)+"");
-            if(td.text()==''){
-                td.text(board[x+2][y+2]).css('boxShadow','none').addClass('not');
-                again(td);
-            }
-        }
+//console.log(board)
+//        if( (x-1)>=1 && (y-1)>=1 ) {
+//            var td=$("#"+(x-1)+"_"+(y-1)+"");
+//            if( td.text()=='' ) {
+//                td.text(board[x-1][y-1]).css('boxShadow','none').addClass('not');
+//                scanAgain(td);
+//            }
+//        }
+//
+//
+//        if( (x-1)>=1 ) {
+//            var td=$("#"+(x-1)+"_"+y+"");
+//            if( td.text()=='' ) {
+//                td.text(board[x-1][y]).css('boxShadow','none').addClass('not');
+//                scanAgain(td);
+//            }
+//        }
+//
+//
+//        if( (x-1)>=1 && (y+1)<=9 ) {
+//            var td=$("#"+(x-1)+"_"+(y+1)+"");
+//            if( td.text()=='' ) {
+//                td.text(board[x-1][y + 1]).css('boxShadow','none').addClass('not');
+//                scanAgain(td);
+//            }
+//        }
+//
+//
+//        if( (y-1)>=1 ) {
+//            var td=$("#"+x+"_"+(y-1)+"");
+//            if( td.text()=='' ) {
+//                td.text(board[x][y-1]).css('boxShadow','none').addClass('not');
+//                scanAgain(td);
+//            }
+//        }
+//
+//
+//        if( (y+1)<=9 ){
+//            var td=$("#"+x+"_"+(y+1)+"");
+//            if( td.text()=='' ) {
+//                td.text(board[x][y+1]).css('boxShadow','none').addClass('not');
+//                scanAgain(td);
+//
+//            }
+//        }
+//
+//
+//        if( (x+1)<=1 && (y-1)>=9 ) {
+//            var td=$("#"+(x+1)+"_"+(y-1)+"");
+//            if( td.text()=='' ) {
+//                td.text(board[x+1][y-1]).css('boxShadow','none').addClass('not');
+//                scanAgain(td);
+//            }
+//        }
+//
+//        if( (x+1)<=9 ) {
+//            var td=$("#"+(x+1)+"_"+y+"");
+//            if( td.text()=='' ) {
+//                td.text(board[x+1][y]).css('boxShadow','none').addClass('not');
+//                scanAgain(td);
+//            }
+//        }
+//
+//        if( (x+1)<=9 && (y+1)<=9 ) {
+//            var td=$("#"+(x+1)+"_"+(y+1)+"");
+//            if( td.text()=='' ){
+//                td.text(board[x+1][y+1]).css('boxShadow','none').addClass('not');
+//                scanAgain(td);
+//            }
+//        }
     }
 
 </script>
