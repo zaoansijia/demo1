@@ -254,7 +254,7 @@
     //绘制一行空白行
     function blank_row(){
         var row = [];
-        for(var i=0; i<t_row; i++){
+        for(var i=0; i<t_cell; i++){
             row[i] = 0;
         }
         return row;
@@ -326,6 +326,7 @@
                     }
                 }
                 board[0] = blank_row();
+                console.log(board,'board')
             }
         }
         return rows;

@@ -1,0 +1,220 @@
+<script type="text/javascript">
+    //领预约码
+    function get_limited_prize( gid ) {
+        $$.prize( false,{ type:'get_limited_prize', prize_id:'1414_'+gid, moblieChap:true, exprList:true });
+    }
+</script>
+<!-- 滚动抽奖号码：开始 -->
+<style>
+    .zj-report{width: 10rem;height: 30px;position: absolute;top: 184px;z-index: 12;font-family: "微软雅黑";}
+    .zj-report .zj-view{width:10rem;overflow:hidden;height:30px;line-height:30px;font-size:12px;margin-left: 89px;}
+    .zj-report .zj-distance{width:8000px;}
+    .zj-report .show_span{color:#FFF;}
+    .zj-report .prize-name{color:#fff600;}
+    @media screen and (min-width: 320px) {
+        .zj-report {top: 186px;}
+        .zj-report .zj-view{margin-left: 60px;}
+    }
+    @media screen and (min-width: 360px) {
+        .zj-report {top: 211px;}
+        .zj-report .zj-view{margin-left: 98px;}
+    }
+    @media screen and (min-width: 375px) {
+        .zj-report {top: 219px;}
+        .zj-report .zj-view{margin-left: 105px;}
+    }
+    @media screen and (min-width: 384px) {
+        .zj-report {top: 224px;}
+        .zj-report .zj-view{margin-left: 105px;}
+    }
+    @media screen and (min-width: 414px) {
+        .zj-report {top: 243px;}
+        .zj-report .zj-view{margin-left: 118px;}
+    }
+    @media screen and (min-width: 600px) {
+        .zj-report {top: 362px;}
+        .zj-report .zj-view{margin-left: 160px;}
+    }
+    .m-chatFloat1{position: fixed;top: 1rem;left: 0;z-index: 100;width: 3.6rem;height: 1.2rem;}
+</style>
+
+<script type="text/javascript">
+    var html = '',dom = '';
+    dom = '<a href="http://chat.meilele.com/mchat/mobile.html?from=m_mchat" class="m-chatFloat1"><img src="http://image.meilele.com/images/zhuanti//kf_03_1463212294.png" /></a>';
+    html += '<div class="zj-report"><div id="JS_view" class="zj-view"><div class="zj-distance clearfix"><div id="JS_show_span_1" class="show_span Left"></div><div id="JS_show_span_2" class="show_span Left"></div></div></div></div>';
+    $('.m-special-box').append(html);
+    $('.m-special-box').append(dom);
+    // 获取数据
+    $.ajax({
+        url:"http://www.meilele.com/mll_api/api/lottery?type=429&limit_end=15&callback=mlottery",
+        dataType:"jsonp",
+        success:function(json){
+            json = json.data;
+            var h = '';
+            for(var i = 0, ii = json.length; i < ii; i++){
+                h += '恭喜'+json[i].tel+'抽中<span class="prize-name">'+json[i].prize_name+'</span>';
+            }
+            $('#JS_show_span_1').html(h);
+            $('#JS_show_span_2').html(h);
+            window.srcollList = new scrollList('JS_view','JS_show_span_1',100,3);
+        }
+    });
+    function scrollList(viewId,showID,timer,step){
+        this.viewId = document.getElementById(viewId);
+        this.showID = document.getElementById(showID);
+        this.distanceLeft = this.showID.offsetWidth;
+        this.timer = timer;
+        this.step = step;
+        this.goRun = true;
+        var that = this;
+        that.viewId.onmouseover = function(){
+            that.goRun = false;
+        }
+        that.viewId.onmouseout = function(){
+            that.goRun = true;
+        }
+        setInterval(function(){
+            if (that.goRun) {
+
+                that.run();
+            }
+        },that.timer)
+    }
+    scrollList.prototype.run = function(viewId,showID,timer){
+        that = this;
+
+        if ( that.viewId.scrollLeft >= that.distanceLeft ) {
+            that.viewId.scrollLeft = 0;
+        }else{
+            that.viewId.scrollLeft += that.step;
+        }
+    }
+
+</script>
+<!-- 滚动抽奖号码：结束 -->
+<style>
+    .m-images-box,.m-special-box{background-color: #019be3;}
+    .m-tab-box .m-sort-list {width: 24rem;}
+</style>
+<!--活动商品：activity_goods_ief0e7a0 START-->
+<!--
+[activity_goods_list_start]
+$activity = array();
+$activity['image'] = '';
+$activity['rule'] = '';
+$activity['content']='';
+$activity[] = array(
+    'name' => '爆款特价||7||2||#019be3',
+    'goods' => 'DMY-ND-1-ZJSF-L[5400]||800,KSHT-KSH-H023-TZ[26499]||1000,KSHT-YN-341-ZZJ[7199]||500,BNM-LX-7031#-ZJL[5720]||500,DMY-SKX-FS6502-ZJL[4299]||800,HFE-962#-SM-18C[3960]||800,KSHT-KSH-A037-18C[3380]||500,KFY-CO-Z001-18C[2480]||500'
+);
+$activity[] = array(
+    'name' => '家具||8||1||#019be3',
+    'goods' => 'SD-FLXS-8239CH6-DD[天使的翅膀六头吊灯]{},SD-MD6013-6-DD[唯美六头吊灯]{},SD-YY-NC051-8H-DD[复古奢华全铜吊灯]{},SD-PFE-495-XDD[磨砂白玉玻璃吸顶灯]{},OD-HCMS-WTS819-YSG[进口橡木浴室柜]{},36277-147[多功能手持花洒套装]{}'
+);
+//分类切换商品
+$cat_goods = array();
+$cat_goods[4] = array(
+    array(
+        'id' => 'slide-1',
+        'background' => 'http://image.meilele.com/images/zhuanti//c5_1463220755.jpg|http://image.meilele.com/images/zhuanti//a5_1463220712.jpg',
+        'goods' => array(
+            array('goods_sn'=>'KSHT-YN-341-15C','title'=>'鼠标移上去显示我自己配置的1','goods_name'=>'美国进口白杨木1.5米床'),
+            array('goods_sn'=>'CFJ-TJ-002-TZ1','title'=>'鼠标移上去显示我自己配置的1','goods_name'=>'现代风格卧室3件套')
+        )
+    ),
+    array(
+        'id' => 'slide-1',
+        'background' => 'http://image.meilele.com/images/zhuanti//c3_1463220752.jpg|http://image.meilele.com/images/zhuanti//a3_1463220711.jpg',
+        'goods' => array(
+            array('goods_sn'=>'KSHT-KSH-803#-ZJL','title'=>'鼠标移上去显示我自己配置的1','goods_name'=>'提花刺绣转角沙发'),
+            array('goods_sn'=>'SME-LH-F2139-ZJL','title'=>'鼠标移上去显示我自己配置的1','goods_name'=>'时尚宽扶L型转角沙发')
+        )
+    ),
+    array(
+        'id' => 'slide-1',
+        'background' => 'http://image.meilele.com/images/zhuanti//c_1463220749.jpg|http://image.meilele.com/images/zhuanti//a_1463220710.jpg',
+        'goods' => array(
+            array('goods_sn'=>'DMY-YJ-T1295B-CTTZ','title'=>'鼠标移上去显示我自己配置的1','goods_name'=>'可折叠拉伸餐桌椅套装'),
+            array('goods_sn'=>'KSHT-YN-341A-5TZ','title'=>'鼠标移上去显示我自己配置的1','goods_name'=>'1.3米实木餐厅套装')
+        )
+    ),
+    array(
+        'id' => 'slide-1',
+        'background' => 'http://image.meilele.com/images/zhuanti//c1_1463220750.jpg|http://image.meilele.com/images/zhuanti//a1_1463220710.jpg',
+        'goods' => array(
+            array('goods_sn'=>'QCKJ-SM-C616S-12C-1','title'=>'鼠标移上去显示我自己配置的1','goods_name'=>'进口芬兰松1.2米双层儿童床'),
+            array('goods_sn'=>'HFE-811#-12C1','title'=>'鼠标移上去显示我自己配置的1','goods_name'=>'1.2米排骨架儿童床')
+        )
+    ),
+    array(
+        'id' => 'slide-1',
+        'background' => 'http://image.meilele.com/images/zhuanti//c4_1463220754.jpg|http://image.meilele.com/images/zhuanti//a4_1463220711.jpg',
+        'goods' => array(
+            array('goods_sn'=>'HFE-813#-DNT','title'=>'鼠标移上去显示我自己配置的1','goods_name'=>'象牙白实木书台'),
+            array('goods_sn'=>'HFE-835#-SG','title'=>'鼠标移上去显示我自己配置的1','goods_name'=>'韩式田园实木书柜')
+        )
+    ),
+    array(
+        'id' => 'slide-1',
+        'background' => 'http://image.meilele.com/images/zhuanti//c2_1463220751.jpg|http://image.meilele.com/images/zhuanti//a2_1463220711.jpg',
+        'goods' => array(
+            array('goods_sn'=>'DMY-XY-918-DL','title'=>'鼠标移上去显示我自己配置的1','goods_name'=>'纯手工藤编户外休闲吊篮'),
+            array('goods_sn'=>'KSHT-YN-341-YY','title'=>'鼠标移上去显示我自己配置的1','goods_name'=>'全实木摇椅')
+        )
+    )
+);
+[activity_goods_list_end]
+-->
+<!--活动商品：activity_goods_ief0e7a0 END-->
+<!-- Tab切换：START -->
+<script type="text/javascript">
+    var swiper = new Swiper('#slide-1',{
+        slidesPerView: 'auto',
+        wrapperClass : 'm-sort-list',
+        slideClass : 'item',
+        roundLengths : true,
+        onTap : function(swiper){
+            var idx = swiper.clickedIndex;
+            swiper.$('.item').find('img.img2').addClass('none');
+            swiper.$('.item').find('img.img1').removeClass('none');
+            swiper.$('.item').eq(idx).find('img.img2').removeClass('none');
+            swiper.$('.item').eq(idx).find('img.img1').addClass('none');
+            swiper.$('.item-list').find('ul').addClass('none');
+            swiper.$('.JS_list_'+(idx+1)).removeClass('none');
+        }
+    });
+</script>
+<!-- Tab切换：START -->
+<!-- 底部漂浮 -->
+-<style type="text/css">
+    .footerFloat{position:fixed;bottom:0px;_position:absolute;z-index: 25;width: 16rem;}
+    .bigOpen{position: relative;}
+    .openDraw{width: 16rem;height: 2.025rem;}
+    .openDraw1{width: 16rem;height: 7.525rem;display: none;}
+    .close{width: 2rem;height:1.325rem;display: none;right: 0;padding: 0.41rem 0.50rem 0 0;position: absolute;top: 0.47rem; }
+</style>
+<div class="footerFloat">
+    <div class="w"><img src="http://image.meilele.com/images/zhuanti//close_1463122633.jpg" class="openDraw"/></div>
+    <div class="w bigOpen viewport">
+        <img src="http://image.meilele.com/images/zhuanti//open_1463122633.png" class="openDraw1" onclick="LuckDraw()"/><div class="close">
+        <img src="http://image.meilele.com/images/zhuanti//p_03_1457755044.png" style="width: 100%;" />
+    </div>
+    </div>
+</div>
+
+<script>
+    $(' .footerFloat .openDraw ').on( 'click', function(){
+        $( '.openDraw1').show();
+        $( '.close').show();
+        $( '.openDraw').hide();
+    });
+    function LuckDraw() {
+        $$.prize( false,{ prize_id:429, type:'get_prize_all', exprList:true });
+    }
+    $('.close').on( 'click',function(){
+        $( '.openDraw1').hide();
+        $( '.close').hide();
+        $( '.openDraw').show();
+    });
+</script>
+<!-- 底部漂浮 -->

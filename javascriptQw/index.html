@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    /*
+     * @param type
+     */
+    function hello1() {
+        console.log('test the type of function');
+    }
+    var hello2 = function() {
+        console.log('test the var function');
+    }
+    var hello3 = [];
+    var hello4 = 'it is is anan';
+    var hello5 = 2;
+    var hello6 = null;
+    var hello7;
+    var hello8 = {
+        'x' : '1',
+        'y' : '2'
+    }
+
+    console.log(typeof hello1,'function type');
+    console.log(typeof hello2,'var function type');
+    console.log(typeof hello3,'arrary type');
+    console.log(typeof hello4,'string type');
+    console.log(typeof hello5,'number type');
+    console.log(typeof hello6,'null type');
+    console.log(typeof hello7,'do not init param type');
+    console.log(typeof hello9,'do not declare param type');
+    //alert(hello7); although the type all 'undefined' ,but the 'hello7' will alert 'undefined'
+   // alert(hello9); 'hello9' will 'Uncaught ReferenceError'
+    console.log(typeof hello8,'object type');
+    //alert( null == undefined );//true
+    //alert( null === undefined);//false
+
+    /*
+     * @param boolean
+     */
+    var message = "Hello world!";
+    var messageAsBoolean = Boolean(message);
+    console.log( messageAsBoolean ,'string tranfer to boolean')
+
+    /*
+     * @param Value range
+     */
+    console.log( Number.MIN_VALUE,'Number.MIN_VALUE' );
+    console.log( Number.MAX_VALUE,'Number.MAX_VALUE' );
+
+    var num_result=Number.MAX_VALUE+Number.MAX_VALUE;
+    console.log(isFinite(num_result),'inFinite to judge the num is Infinity?')
+
+    /*
+     *@param 前置递增递减,变量的值都是在语句被求值前改变的,
+     *       后置递增递减,变量的值都是在语句被求值后改变的,
+     */
+    //before
+    var h_num1 = 2;
+    var h_num2 = 20;
+    var h_num_a = h_num1 + h_num2;//22
+    var h_num_b = --h_num1 + h_num2; //21
+    var h_num_c= h_num1 + h_num2; //21
+    console.log(h_num_a,'before num_a');
+    console.log(h_num_b,'before num_b');
+    console.log(h_num_c,'before num_c');
+
+    //after
+    var num1 = 2;
+    var num2 = 20;
+    var num_a = num1 + num2;//22
+    var num_b = num1-- + num2; //22
+    var num_c= num1 + num2; //21
+    console.log(num_a,'after num_a');
+    console.log(num_b,'after num_b');
+    console.log(num_c,'after num_c');
+
+
+</script>
+
+</body>
+</html>

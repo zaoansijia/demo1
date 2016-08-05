@@ -39,6 +39,21 @@
 <script>
     var board=[];
     var num=0;
+    var mineCoordinate='';
+    function setCoordinate(x,y){
+        var sqr=[
+            {'x':(x-1),'y':(y-1)},//top_left
+            {'x':(x-1),'y':y},//top_middle
+            {'x':(x-1),'y':(y+1)},//top_right
+            {'x':x,'y':(y-1)},//middle_left
+            {'x':x,'y':(y+1)},//middle_right
+            {'x':(x+1),'y':(y-1)},//bottom_left
+            {'x':(x+1),'y':y},//bottom_middle
+            {'x':(x+1),'y':(y+1)},//bottom_right
+
+        ];
+        return sqr;
+    }
     $(document).ready(function () {
         setTable(9,9,"table","content");
         
@@ -64,17 +79,13 @@
 
             for( var j=1; j<10; j++ ) {
                 var nums=0//to account the number of 'mine'
+                var sqr=setCoordinate(i,j);
 
                 if( board[i][j]!='mine' ){
-
-                 if(board[i-1][j-1]=='mine') nums+=1;
-                 if(board[i-1][j]=='mine') nums+=1;
-                 if(board[i-1][j+1]=='mine') nums+=1;
-                 if(board[i][j-1]=='mine') nums+=1;
-                 if(board[i][j+1]=='mine') nums+=1;
-                 if(board[i+1][j-1]=='mine') nums+=1;
-                 if(board[i+1][j]=='mine') nums+=1;
-                 if(board[i+1][j+1]=='mine') nums+=1;
+                    var sqr=setCoordinate(i,j);
+                    for(var k=0; k< sqr.length ;k++){
+                        if(board[sqr[k].x][sqr[k].y]=='mine') nums+=1;
+                    }
 
                  board[i][j]=nums;
                 }
@@ -144,27 +155,17 @@
         }
     }
     var showText = function( object ) {
+        var data = object.attr('id').split('_');
         var x=parseInt(data[0]);
         var y=parseInt(data[1]);
         //According to 'td' which clicked to judge the center squares
-        var array=[
-            {'x':(x-1),'y':(y-1)},//top_left
-            {'x':(x-1),'y':y},//top_middle
-            {'x':(x-1),'y':(y+1)},//top_right
-            {'x':x,'y':(y-1)},//middle_left
-            {'x':x,'y':(y+1)},//middle_right
-            {'x':(x+1),'y':(y-1)},//bottom_left
-            {'x':(x+1),'y':y},//bottom_middle
-            {'x':(x+1),'y':(y+1)},//bottom_right
+        var sqr=setCoordinate(x,y);
 
-        ]
-
-
-        for( var i=0; i<array.length; i++ ) {
+        for( var i=0; i<sqr.length; i++ ) {
             if( sqr[i].x>=1 && sqr[i].x<=9 && sqr[i].y>=1 && sqr[i].y<=9){
-                var td=$("#"+sqr[i].x+"_"+sqr[i].x+"");
+                var td=$("#"+sqr[i].x+"_"+sqr[i].y+"");
                 if( td.text()=='' ) {
-                    td.text(board[sqr[i].x][sqr[i].x]).css('boxShadow','none').addClass('not');
+                    td.text(board[sqr[i].x][sqr[i].y]).css('boxShadow','none').addClass('not');
                     scanAgain(td);
                 }
             }
