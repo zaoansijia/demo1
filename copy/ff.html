@@ -1,0 +1,338 @@
+<script type="text/javascript">
+    function _LOAD_SCRIPT_(){}
+    // ie6就不执行
+    (function($){
+        var ie = !!window.ActiveXObject;
+        if ( ie && !window.XMLHttpRequest ) {
+            $('body').css({
+                overflow: 'hidden',
+                position: 'absolute',
+                height: window.screen.height + 'px'
+            });
+            var html = '<div style="height:200px;"></div><div style="width:500px;padding:20px;background:#fff;margin:0 auto;font-size:16px;">浏览器版本太低，不能参与抽奖，请更换浏览器，谢谢！</div>';
+            $.lightBox(html, {}, true, 9999, false, true, '');
+        }
+    })(jQuery);
+</script>
+<!--头部通栏：tonglan_ir4lphu3 START-->
+<style>
+    .topic_1{background:#0f75b1;}
+    .topic_2{background:url(http://image.meilele.com/images/zhuanti//hea_1470394573.jpg) center top no-repeat;}
+</style>
+
+<!--头部通栏：tonglan_ir4lphu3 END-->
+<!--活动规则：activity_rule_i8b8yqx4 START-->
+<style>
+    .special_lightBox .in{width:800px;}
+    .attentionRuleHeader{color:#333;padding-bottom:10px;}
+    .attentionRuleContent{color:#666;line-height:20px;}
+    .lightBox{top: 50px;}
+    ._ruleLightBox{top:200px!important;}
+</style>
+<script type="text/javascript">
+    function ruleDiscount() {
+        if ( $.lightBoxId ) {
+            $.closeLightBox();
+        }
+        var titxt = "抽奖规则",
+                contxt = "1.抽奖时间：8月1日-8月14日；<br />2.订单付款满6000元可以参加抽奖，每付满5000元增加一次抽奖机会，付款金额大于订单金额的，以订单金额计算抽奖次数；<br />3.抽奖仅限美乐乐自营订单参与，体验馆特卖、拍卖、秒杀、第三方配送订单不参与订单抽奖活动；<br />4.符合抽奖条件的订单，请自行到就近体验馆参与抽奖；<br />5.实物奖品抽中后，我们将在活动结束后的3-7个工作日寄出奖品；<br />6.参加订单抽奖的订单及商品不能享受保价服务；<br />7.订单抽奖所得实物奖品，不接受折现、退货服务，若抽奖的订单发生退换货导致不满足抽奖条件或不满足已抽奖次数，若奖品已发货，则从订单中按照中奖奖品价值由低到高依次扣除与商品价值等额的退款金额，已发货的奖品不接受退换货服务；若奖品未发货，则系统默认用户放弃领奖，无需额外支付奖品费用；<br />8.订单抽奖所得现金红包奖品，红包序列号将在抽奖后的下一个工作日通过短信形式发送到收货人手机号和订单所属账户，请注意查收；<br />9.红包使用时间为8月1日-8月28日；100元现金红包，订单金额满200元使用(限自营本站价商品）；300元现金红包，订单金额满600元使用(限自营本站价商品），使用该红包的订单不可与其它活动同时参加，不可与其它优惠券、验证码、红包等抵用劵同时使用；现金红包只抵扣对应商品金额，不可抵扣物流费/快递费/服务费；<br />10.红包不找零、不折现，限一次性使用完；<br />11.实物奖品数量有限，先到先得，送完即止；<br />12.未尽事宜，如有疑问，请咨询在线客服，美乐乐保留最终解释权；",
+                re = new RegExp( "\s", "g" ),
+                contxt1 = contxt.replace( re, "" );
+        if( contxt1.charAt( contxt1.length - 1 ) == "&" && contxt1.charAt( contxt1.length - 2 ) == "&" ) {
+            contxt1 = contxt1.substring( 0, contxt1.length - 2 );
+        }
+        var cont = contxt1.split( "&&" ),
+                html = '<div class="attentionRuleHeader"><b>'+ titxt +'</b></div>';
+        html += '<div><p class="attentionRuleContent">';
+        for ( var i = 0; i < cont.length; i++ ) {
+            if( cont[i] ) { html += cont[i] + '<br/>'; }
+        };
+        html += '</p></div>';
+
+        $.lightBox( html, { '确定':'close' }, false, 300, '', true, 'special_lightBox _ruleLightBox' );
+    }
+</script>
+
+<!--活动规则：activity_rule_i8b8yqx4 END-->
+<!--开始抽奖转盘START-->
+<style>
+    .prize-circle{width:505px;height:505px;overflow:hidden;position:absolute;margin-top:589px;left:0;}
+    .prize-circle div{overflow:hidden;position:absolute;}
+    .prize-circle .circle-panel{width:505px;height:505px;}
+    .prize-circle .circle-prize{width:429px;height:429px;top:38px;left:38px;z-inex:2;}
+    .prize-circle .circle-btn{width:166px;height:166px;top:170px;left:170px;z-index:3;cursor:pointer;}
+    .prize-circle div img{background: none;}
+</style>
+
+<script>
+    var cir = [];
+    cir.push('<div class="prize-circle">');
+    cir.push('<div class="circle-panel"><img src="http://image.meilele.com/images/zhuanti/1_1469687120.png" width="505" height="505" alt="转盘" style="background:none;" /></div>');
+    cir.push('<div class="circle-prize"><img id="jsPrizeRoateBox" src="http://image.meilele.com/images/zhuanti/m_201608_newaoyun/1_1470316472.png" width="429" height="429" alt="转盘" /></div>');
+    cir.push('<div id="jsCircleButton" class="circle-btn"><img src="http://image.meilele.com/images/zhuanti/3_1469687209.png" width="166" height="166" alt="转盘"></div>');
+    cir.push('</div>');
+
+    $(".topic_2").before('<div class="w" style="position:relative;">'+ cir.join('') +'<div id="jsPrizeTabModel" style="position:absolute;left:513px;top:600px;"></div></div>');
+
+    $.getScript($.__IMG + '/js/jquery.rotate.min.js', function(){
+        var rotateFn = function() {
+            $('#jsPrizeRoateBox').rotate({
+                angle: 0,
+                animateTo: 360,
+                duration: 10000,
+                callback: rotateFn,
+                easing: function(x,t,b,c,d) {
+                    return c * (t / d) + b;
+                }
+            });
+        }
+        rotateFn();
+    });
+</script>
+
+<!--开始抽奖转盘END-->
+
+
+<style type="text/css">
+    .prizetab-container{width:459px;height:496px;background:#2caaf4;padding:4px;font-family:Microsoft Yahei;}
+    .prizetab-container .prizetab-nav{height:48px;}
+    .prizetab-container .prizetab-nav a{display:inline-block;vertical-align:top;width:229px;height:48px;line-height:48px;text-align:center;color:#fff;font-size:20px;text-decoration:none;border-left:solid 1px #8fd2f9;}
+    .prizetab-container .prizetab-nav a.first{border-left:none;}
+    .prizetab-container .prizetab-nav a:hover{color:#fff!important;}
+    .prizetab-container .prizetab-nav a.current{font-weight:bold;color:#2caaf4!important;background:#fff;}
+    .prizetab-container .prizetab-con{height:448px;background:#fff;}
+    .prizetab-container .prizetab-con .con-item{display:none;}
+    .prizetab-container .prizetab-con .con-item.current{display:block;}
+    .prizetab-container .prizetab-con .con-item table{width:100%;}
+    .prizetab-container .prize-list{padding:11px 12px;}
+    .prizetab-container .prize-list .list-header{height:25px;line-height:25px;background:#ddd;font-size:14px;font-weight:bold;color:#606060;}
+    .prizetab-container .prize-list table tr td{text-align:center;}
+    .prizetab-container .prize-list table tr td.td1{width:165px;}
+    .prizetab-container .prize-list table tr td.td2{}
+    .prizetab-container .prize-list table tr td.td3{width:122px;}
+    .prizetab-container .prize-list .list-body{margin-top:2px;height:330px;overflow:hidden;}
+    .prizetab-container .prize-list .list-body ul{}
+    .prizetab-container .prize-list .list-body ul li{height:55px;border-bottom:dashed 1px #ddd;padding:5px 0;}
+    .prizetab-container .prize-list .list-body ul li table{_display:inline;vertical-align:top;}
+    .prizetab-container .prize-list .list-body td{font-size:14px;color:#747474;}
+    .prizetab-container .prize-list .prize-count{margin-top:20px;font-weight:bold;text-align:center;font-size:25px;color:#606060;}
+    .prizetab-container .prize-list .prize-count span{color:#fa3131;}
+    .prizetab-container .user-prize{padding:20px 21px;}
+    .prizetab-container .user-prize .order-bar{height:24px;line-height:24px;}
+    .prizetab-container .user-prize .order-bar strong{font-size:20px;color:#3c3b3b;float:left;display:none;}
+    .prizetab-container .user-prize .order-bar a{display:inline-block;vertical-align:top;height:24px;text-align:center;color:#fff;text-decoration:none;border-radius:12px;font-family:'宋体';padding:0 15px;}
+    .prizetab-container .user-prize .order-bar a:hover{color:#fff!important;}
+    .prizetab-container .user-prize .order-bar .get{background:#ff7f00;margin-right:5px;}
+    .prizetab-container .user-prize .order-bar .get:hover{background:#ff9124;}
+    .prizetab-container .user-prize .order-bar .query{background:#7dc10a;}
+    .prizetab-container .user-prize .order-bar .query:hover{background:#95e60d;}
+    .prizetab-container .user-prize .text{margin-top:5px;color:#7b7b7b;display:none;}
+    .prizetab-container .user-prize .text span{color:#e51818;}
+    .prizetab-container .user-prize .prize-table{margin-top:15px;}
+    .prizetab-container .user-prize .prize-table table{border-left:solid 1px #e2e2e2;border-top:solid 1px ##e2e2e2;}
+    .prizetab-container .user-prize .prize-table table tr th,
+    .prizetab-container .user-prize .prize-table table tr td{border-right:solid 1px #e2e2e2;border-bottom:solid 1px #e2e2e2;}
+    .prizetab-container .user-prize .prize-table table tr th{height:34px;line-height:34px;background:#e2e2e2;text-align:center;font-size:16px;color:#737373;font-weight:bold;}
+    .prizetab-container .user-prize .prize-table table tr td{padding-left:18px;padding-right:18px;}
+    .prizetab-container .user-prize .prize-table table tr td.td1{width:119px;}
+    .prizetab-container .user-prize .prize-table table tr td.td2{padding-top:13px;padding-bottom:13px;}
+    .prizetab-container .user-prize .prize-table .prize-table-list{height:312px;overflow-y:auto;}
+    .prizetab-container .user-prize .prize-table .level{height:47px;font-size:20px;color:#616161;font-weight:bold;}
+    .prizetab-container .user-prize .prize-table .level img{margin-right:5px;}
+    .prizetab-container .user-prize .prize-table .level span{padding-top:12px;display:inline-block;vertical-align:top;}
+    .prizetab-container .user-prize .prize-table .goods{width:100%;height:77px;float:left;}
+    .prizetab-container .user-prize .prize-table .goods .cover{width:108px;height:77px;overflow:hidden;float:left;margin-right:10px;}
+    .prizetab-container .user-prize .prize-table .goods .name{font-size:14px;color:#989898;height:77px;overflow:hidden;line-height:150%;}
+</style>
+<script type="text/javascript">
+    var pt = [];
+    pt.push('<div class="prizetab-container">');
+    pt.push('<div id="jsPrizeTabHandler" class="prizetab-nav"><a href="javascript:;" class="first current">中奖公告</a><a href="javascript:;">我的奖品</a></div>');
+    pt.push('<div id="jsPrizeTabCont" class="prizetab-con">');
+    pt.push('<div class="con-item prize-list current">');
+    pt.push('<div class="list-header">');
+    pt.push('<table><tr>');
+    pt.push('<td class="td1">订单号</td>');
+    pt.push('<td class="td2">获奖</td>');
+    pt.push('<td class="td3">奖品</td>');
+    pt.push('</tr></table>');
+    pt.push('</div>');
+    pt.push('<div class="list-body">');
+    pt.push('<ul id="jsPrizeInfoList"></ul>');
+    pt.push('</div>');
+    pt.push('<div class="prize-count">已有<span id="jsPrizeTotalNum">0</span>人喜中大奖！</div>');
+    pt.push('</div>');
+    pt.push('<div class="con-item user-prize">');
+    pt.push('<div id="jsPrizeOrderBar" class="order-bar">');
+    pt.push('<strong id="jsPrizeOrderSn"></strong>');
+    pt.push('<div class="Right"><a href="javascript:;" id="jsPrizeClick" class="get">我要抽奖</a><a href="javascript:;" id="jsPrizeQuery" class="query">查询中奖</a></div>');
+    pt.push('</div>');
+    pt.push('<p id="jsPrizeNumBox" class="text">共计获得抽奖机会<span>...</span>次，已经抽奖<span>...</span>次，您还有<span>...</span>次抽奖机会！</p>');
+    pt.push('<div class="prize-table">');
+    pt.push('<div class="prize-table-th">');
+    pt.push('<table>');
+    pt.push('<tr>');
+    pt.push('<th class="td1">所中奖项</th>');
+    pt.push('<th class="td2">已选奖品</th>');
+    pt.push('</tr>');
+    pt.push('</table>');
+    pt.push('</div>');
+    pt.push('<div id="jsPrizeUserList" class="prize-table-list"></div>');
+    pt.push('</div>');
+    pt.push('</div>');
+    pt.push('</div>');
+    pt.push('</div>');
+    $('#jsPrizeTabModel').html(pt.join(''));
+
+    !function($){
+        var
+                tabHandler = $('#jsPrizeTabHandler'),
+                tabHandlerItem = tabHandler.find('a'),
+                tabConItem = $('#jsPrizeTabCont .con-item');
+
+        tabHandler.on('click', 'a', function(){
+            var
+                    self = $(this),
+                    index = $(this).index();
+
+            tabHandlerItem.removeClass('current');
+            self.addClass('current');
+            tabConItem.removeClass('current').eq(index).addClass('current');
+        });
+    }(jQuery), function($){
+        // 获取中奖公告
+        $.ajax({
+            url: '/mll_api/api/olmpic_notice',
+            type: 'GET',
+            dataType: 'json',
+            cache: false,
+            success: function(json) {
+                if ( json && json.recoder_list && json.recoder_list.num > 0 ) {
+                    formartRecod(json.recoder_list);
+                }
+            }
+        });
+
+        function formartRecod(json) {
+            var
+                    re = json.recoder,
+                    len = re.length,
+                    opt = [];
+
+            for ( var i = 0; i < len; i++ ) {
+                opt.push('<li><table><tr>');
+                opt.push('<td class="td1">'+ re[i].order_sn +'</td>');
+                opt.push('<td class="td2">'+ re[i].prize_level +'</td>');
+                opt.push('<td class="td3"><div class="cover"><img src="'+ re[i].goods_imge +'" width="86" height="55" alt="" /></div></td>');
+                opt.push('</tr></table></li>');
+            }
+            $('#jsPrizeInfoList').html(opt.join(''));
+            $('#jsPrizeTotalNum').html(json.num);
+            Marquee();
+        }
+
+        function Marquee(){
+            var
+                    list = $('#jsPrizeInfoList'),
+                    item = list.find('li'),
+                    len = item.length,
+                    isLock = false,
+                    step = 66;
+
+            if ( !list ) return;
+
+            if ( len >= 5 ) {
+                list.hover(function(){
+                    isLock = true;
+                }, function(){
+                    isLock = false;
+                });
+
+                var html = list.html();
+                html += html;
+                list.html(html);
+                setInterval(auto , 2000);
+            }
+
+            function auto(){
+                if ( isLock ) {
+                    return;
+                }
+
+                var to = parseInt(list.css('margin-top')) || 0;
+                if ( to <= len *(-step) ) {
+                    list.css({'margin-top': '0px'});
+                    to = 0;
+                }
+                to -= step;
+                list.animate({'margin-top': to + 'px'} ,400);
+            }
+        }
+    }(jQuery);
+
+    function formartUserPrize(json) {
+        var
+                html = [],
+                data = json.data,
+                p = data.my_prize_list,
+                c = data.order_times,
+                numLabel = $('#jsPrizeNumBox span');
+
+        numLabel.eq(0).html(c.order_can_draw);
+        numLabel.eq(1).html(c.already_draw);
+        numLabel.eq(2).html(c.left_can_draw);
+
+        $('#jsPrizeOrderSn').html('订单号 '+ json.order_sn).show();
+        $('#jsPrizeClickWidthOrderSn').data('order_sn', json.order_sn);
+
+        html.push('<table>');
+        for ( var i = 0, ii = p.length; i < ii; i++ ) {
+            html.push('<tr>');
+            html.push('<td class="td1"><div class="level"><img src="http://image.meilele.com/images/zhuanti/4_1469693770.gif" width="34" height="47" alt="" /><span>'+ p[i].prize_name +'</span></div></td>');
+            html.push('<td class="td2"><div class="goods" title="'+ p[i].h_goods_name +'"><div class="cover"><img src="'+ p[i].h_goods_imge +'" width="108" height="77" alt="" /></div><p class="name">'+ p[i].h_goods_name.substr(0, 17) +'</p></div></td>');
+            html.push('</tr>');
+        }
+        html.push('</table>');
+
+        $('#jsPrizeUserList').html(html.join(''));
+
+        $('#jsPrizeOrderBar').show();
+        $('#jsPrizeNumBox').show();
+
+        $('#jsPrizeTabHandler a').eq(1).trigger('click');
+    }
+
+    var
+            _actID = '1',
+            orderSn = $.cookie('_sn_') || '';
+    // 抽奖
+    $('#jsCircleButton, #jsPrizeClick').click(function(){
+        $.showLoginBox(function(){
+            $.orderPrize(_actID, {
+                orderSn: orderSn,
+                onSuccess: function(json) {},
+                getUserPrizeInfoSuccess: function(json) {
+                    if ( json.error == 0 ) {
+                        formartUserPrize(json);
+                    }
+                }
+            });
+        });
+    });
+
+    // 查询
+    $('#jsPrizeQuery').click(function(){
+        $.showLoginBox(function(){
+            $.orderPrize(_actID, {
+                orderSn: orderSn,
+                type: 'query',
+                onSuccess: function(json) {},
+                getUserPrizeInfoSuccess: function(json) {
+                    if ( json.error == 0 ) {
+                        formartUserPrize(json);
+                    }
+                }
+            });
+        });
+    });
+</script>
