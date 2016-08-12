@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .p{line-height:2}
+        .a1{ font:12px arial;}/*font里面的size设置其实是：font-size/line-height*/
+        .a{font-size:12px;line-height:200%; }
+        .b{font-size:16px;}
+        /*box-sizing:border-box 是指通过从已设定的宽度和高度分别减去边框和内边距才能得到内容的宽度和高度。*/
+        /*子元素的padding和margin（包含top和bottom）和width（包含top和bottom）百分百是基于父级元素的width（不包含padding）*/
+
+        .A{ width:100px; padding:10px; box-sizing:border-box; background-color: red}
+        .B{ width:100%; padding:10%; background-color:green; margin: 10%}
+        .arrow{
+            width:0; height:0; border:5px solid #000;
+        }
+        .arrow{border-color:#000 transparent transparent;}
+    </style>
+</head>
+<body>
+<!--1-->
+<p class="a1">22</p>
+<div class='a'><p class='b'>文字</p></div>
+<div class="A"><div class="B"></div></div>
+<div class="arrow"></div>
+<script>
+    //++的优先级高于&&的优先级。但a++是先用a来执行语句，然后才a+1。所以b表达式wei var b=0?1:0;
+    var a=0;
+    var b=!{}?1:a++&&a++;
+    console.log(a,'a');
+    console.log(b,'b');
+
+    //test 申明提前,如果函数内的变量不是var a1,而是a1,则结果不一样
+    var a1=1;
+    (function(){
+        console.log(a1,'ahead param');
+        var a1=2;
+        console.log(a1,'ahead param');
+    })();
+
+    //
+    (function(callback){
+        president ={name:"bush"};
+        callback(president);
+    })(function(obj){
+        console.log(obj==president,'callback obj==president');
+        obj.name ="obama";
+        console.log(obj==president,'callback obj==president');
+        obj ={name:"clinton"};//重新定义了一个对象，此刻obj不等于president
+        obj.name = 'sss';
+        console.log(obj,'callback obj');
+        console.log(president,'callback president')
+        console.log(obj==president,'callback obj==president');
+        console.log(obj.name,'callback obj.name');
+        console.log(president.name,'callback president.name')
+    });
+    console.log(president.name,'callback outer.president.name');
+    //
+    //test 3
+    var A=1;
+    (function A(){
+        A=2;
+        console.log(A,'A');
+        delete A;
+        console.log(A,'A after delete');
+    })();
+
+    //var x=0;
+    function foo(x){
+       // x++;
+        console.log(x,'x')
+        console.log(this.length=x,'foo this')
+   // this.length=x;
+    return foo;
+    }
+    console.log((new foo()).length,'test new new new');
+    //
+    //test2
+    var foo2={
+        bar:function(){
+            console.log(this,'test this');
+        }
+    };
+    (foo2.bar)();//this 为 foo2
+    (foo2.bar,foo2.bar)();//this 为 window
+    (foo2.bar=foo2.bar)();//this 为 window
+    foo2.bar=function(){
+        console.log('new')
+    };
+    console.log(foo2.bar,'new bar');
+    console.log(foo2.bar,foo2.bar,',');
+    console.log(foo2.bar=foo2.bar,'=');
+
+    //
+    (function (){
+        console.log('test11111111')
+    },function (){
+        console.log('test22222222222')
+    })();//自执行匿名函数，后面的fuction并不是回调，回调格式如下，
+
+
+    //
+    var o={
+        m: 10,
+        foo: function () {
+            with (this) {
+                function bar() {
+                    console.log(m,'m');//20
+                    console.log(this.m,'this.mo');//指向的是window对象
+                }
+                var m=20;//用了with作用是this.m=20;
+                (function() {
+                    bar();
+                })();
+                bar.call(this);//第二次  20，20
+            }
+        }
+    }
+    o.foo();
+
+    (function test(){
+        console.log(this,'自定义函数里面的this')
+    })();
+
+
+</script>
+</body>
+</html>

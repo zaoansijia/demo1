@@ -25,7 +25,7 @@ function getSrc ( base,suffix ) {
 // 在命令行使用 gulp css 启动此任务
 gulp.task('cssMin', function () {
     // 1. 找到文件
-    return gulp.src(paths.css)
+    return gulp.src('newSrc/css/*css')
         // 2. 压缩文件
         .pipe(cssMin())
         // 3. 另存为压缩文件
@@ -101,10 +101,10 @@ gulp.task( 'gulpColor' ,function(done) {
     done();
 })
 gulp.task('auto', function () {
-    // 监听文件修改，当文件被修改则执行 script 任务
+    // 监听文件修改，当文件被修改则执行 如下 任务
     gulp.watch('newSrc/js/*js', gulp.series('jsMin'));
     gulp.watch('newSrc/html/*html', gulp.series('htmlMin'));
     gulp.watch('newSrc/css/*css', gulp.series('cssMin'));
     gulp.watch('newSrc/less/*less', gulp.series('less'));
 });
-gulp.task('default', gulp.series(['gulpColor','auto','cssMin']));
+gulp.task('default', gulp.series('auto'));

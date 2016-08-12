@@ -6,6 +6,7 @@
 </head>
 <body>
 <script type="text/javascript">
+    //'use strict'
     /*
      * @param type
      */
@@ -79,19 +80,31 @@
     console.log(num_b,'after num_b');
     console.log(num_c,'after num_c');
 
+    //  ??? for循环外部能访问到for循环内部的变量？？？ test：
+
+    for( var i=0; i<5 ; i++){
+        console.log(i,'in');
+    }
+    console.log(i,'out');
+    console.log(!{},'ss');
+    // test if statement conditions
+
+    //test1
+    var x=0;
+    function foo(x){
+        x++;
+        this.length=x;
+        return foo;
+    }
+    var bar =new new new foo;
+    console.log(bar.length,'test new new new');
+
+
+
+
+
 
 </script>
 
 </body>
 </html>
-//新地址
-#192.168.0.145 	seller.meilele.com
-#192.168.0.145 	store.meilele.com
-#192.168.0.145 	m.meilele.com
-192.168.0.145 	help.meilele.com
-#192.168.0.145 	data.meilele.com
-#192.168.0.145 	zx.meilele.com
-192.168.0.145 	image.meilele.com
-192.168.0.145 	www.meilele.com
-#192.168.0.144 	zxdb.meilele.com
-#192.168.0.145 	slave.meilele.com
