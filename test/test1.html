@@ -48,7 +48,7 @@
         console.log(obj==president,'callback obj==president');
         obj.name ="obama";
         console.log(obj==president,'callback obj==president');
-        obj ={name:"clinton"};//重新定义了一个对象，此刻obj不等于president
+        obj ={name:"clinton"};//重新定义了一个对象，此刻obj和president不指向于同一个对象
         obj.name = 'sss';
         console.log(obj,'callback obj');
         console.log(president,'callback president')
@@ -123,6 +123,8 @@
     (function test(){
         console.log(this,'自定义函数里面的this')
     })();
+
+
 
 
 </script>

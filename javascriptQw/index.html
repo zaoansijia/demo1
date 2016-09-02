@@ -80,27 +80,60 @@
     console.log(num_b,'after num_b');
     console.log(num_c,'after num_c');
 
-    //  ??? for循环外部能访问到for循环内部的变量？？？ test：
+//     ??? for循环外部能访问到for循环内部的变量？？？ test：
+//
+//     JS没有块级作用域,意思是指
+//     在块级作用域语言if和for中，由for语句或者if语句中创建的变量即使在for循环执行结束后，也依旧会存在于循环外部的执行环境中
+//     eg：
+
 
     for( var i=0; i<5 ; i++){
         console.log(i,'in');
     }
     console.log(i,'out');
     console.log(!{},'ss');
-    // test if statement conditions
 
-    //test1
-    var x=0;
-    function foo(x){
-        x++;
-        this.length=x;
-        return foo;
+    /*
+     * @param function
+     */
+    // @arguments
+
+    function howManyArgs() {
+        console.log( arguments.length,'how many arguments' );
     }
-    var bar =new new new foo;
-    console.log(bar.length,'test new new new');
+    howManyArgs( 'string',45 );
+    howManyArgs();
+    howManyArgs( 12 );
 
+    // instance of
+    var person = {};
+    var colors = [];
+    var pattern = /Chapter [1-9][0-9]?/;
+    console.log(person instanceof Object,'instanceof the object'); // 变量person 是Object 吗？
+    console.log(colors instanceof Array,'instanceof the array'); // 变量colors 是Array 吗？
+    console.log(pattern instanceof RegExp,'instanceof the RegExp'); // 变量pattern 是RegExp 吗？
 
+    //test is array.isArray 兼容支持Array.isArray()方法的浏览器有IE9+、Firefox 4+、Safari 5+、Opera 10.5+和Chrome
+    var value = [];
+    if (Array.isArray(value)){
+    //对数组执行某些操作，兼容性：有IE9+、Firefox 4+、Safari 5+、Opera 10.5+和Chrome
+    }
+    //about array and lIFO push and pop
 
+    var person1 = ['red'];
+    person1.pop();
+    console.log( person1.pop(),'array pop()');
+    console.log(person1,'array after pop')
+    person1.push('hello');
+    console.log(person1,'array push')
+
+    //compare sort 升序
+    function compare(value1, value2){
+        return  value1-value2;
+    }
+    var values = [0, 1, 5, 10, 15,10];
+    values.sort(compare);
+    console.log(values,'sort')
 
 
 
