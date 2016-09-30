@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{display: inline-block}
+        .div1{
+            width:100px;
+            height: 100px;
+            border-left: 50px solid red;
+            border-top: 50px solid green;
+            border-right: 50px solid blueviolet;
+            border-bottom: 50px solid black;
+        }
+        .div2{
+            height: 0px;
+        }
+        .div3{
+            width: 0px;
+        }
+        .div4{
+            width: 0px;
+            height: 0px;
+        }
+        .div5{
+            width: 0;
+            height: 0;
+            border:50px solid transparent;
+            border-left:50px solid red;
+        }
+        .div6{
+            width: 100px;
+            height: 0;
+            border:50px solid transparent;
+            border-top:50px solid red;
+        }
+        .div7{
+            width: 100px;
+            height: 100px;
+        }
+        .div8{
+            width: 200px;
+            height: 200px;
+            border-top:20px solid #3ACFD5;
+            border-bottom:20px solid #3a4ed5;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            background-position: 0 100%,100% 100%;
+            background-size: 20px 100%,20px 100%;
+            background-repeat: no-repeat;
+            background-image: -webkit-linear-gradient(top, #3acfd5, #3a4ed5),-webkit-linear-gradient(top, #3acfd5, #3a4ed5);
+            background-image: -moz-linear-gradient(top, #3acfd5, #3a4ed5),-moz-linear-gradient(top, #3acfd5, #3a4ed5);
+            background-image: -o-linear-gradient(top, #3acfd5, #3a4ed5),-o-linear-gradient(top, #3acfd5, #3a4ed5);
+            background:linear-gradient(top, #3acfd5, #3a4ed5) 0 100%/20px 100% no-repeat,linear-gradient(to bottom, #3acfd5, #3a4ed5) 100% 100%/20px 100% no-repeat;
+        }
+        .div11 {
+            position: relative;
+            width:470px;
+            height: 200px;
+            border-top: 20px solid #3ACFD5;
+            border-bottom:20px solid #3a4ed5;
+            box-sizing: border-box;
+            background:
+            linear-gradient(to bottom, #3acfd5, #3a4ed5) 0 100%/10px 100% no-repeat,
+            linear-gradient(to bottom, #3acfd5, #3a4ed5) 60px 100%/10px 80% no-repeat,
+            linear-gradient(to bottom, #3acfd5, #3a4ed5) 100px 100%/10px 90% no-repeat,
+            linear-gradient(to bottom, #3acfd5, #3a4ed5) 140px 100%/10px 80% no-repeat,
+            linear-gradient(to bottom, #3acfd5, #3a4ed5) 180px 100%/10px 90% no-repeat,
+            linear-gradient(to bottom, #3acfd5, #3a4ed5) 220px 100%/10px 80% no-repeat,
+            linear-gradient(to bottom, #3acfd5, #3a4ed5) 260px 100%/10px 90% no-repeat,
+            linear-gradient(to bottom, #3acfd5, #3a4ed5) 300px 100%/10px 80% no-repeat,
+            linear-gradient(to bottom, #3acfd5, #3a4ed5) 340px 100%/10px 90% no-repeat,
+            linear-gradient(to bottom, #3acfd5, #3a4ed5) 380px 100%/10px 80% no-repeat,
+            linear-gradient(to bottom, #3acfd5, #3a4ed5) 420px 100%/10px 90% no-repeat,
+            linear-gradient(to bottom, #3acfd5, #3a4ed5) 460px 100%/10px 100% no-repeat;
+        }
+        .div11 span{
+            width: 20px;
+            height: 20px;
+            background-color: #000;
+            border-radius: 80px;
+            display: inline-block;
+            position: absolute;
+            left: 10px;
+            bottom: 0;
+        }
+        .div11 span{
+            -webkit-animation:bounce 5s .2s ease both;
+            -moz-animation:bounce 5s .2s ease both;}
+        @-webkit-keyframes bounce{
+            0%{-webkit-transform:translateY(0)}
+            10%{-webkit-transform:translateY(-140px)}
+            15%{-webkit-transform:translateY(-140px) translateX(45px)}
+            20%,22.5%,25%{-webkit-transform:translateY(-120px) translateX(45px)}
+            22%{-webkit-transform:translateY(-140px) translateX(45px)}
+            24%{-webkit-transform:translateY(-130px) translateX(45px)}
+            26%{-webkit-transform:translateY(-120px) translateX(60px)}
+            100%{-webkit-transform:translateY(0) translateX(60px)}
+
+        }
+
+        .div9 {
+            margin-top:20px;
+            width:300px;
+            height: 50px;
+            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+        }
+        .div10{
+            width: 200px;
+            height: 200px;
+            background:linear-gradient(0deg,red,yellow);
+        }
+    </style>
+</head>
+<body>
+<div>
+    <p>关于用css3画三角形</p>
+    <div class="div1">高宽位100</div>
+    <div class="div2 div1"></div>
+    <div class="div3 div1"></div>
+    <div class="div4 div1"></div>
+    <div class="div5"></div>
+    <div class="div6"></div>
+    <div class="div7"></div>
+    <div class="div8"></div>
+    <div class="div9"></div>
+    <div class="div10"></div>
+    <div class="div11" style="display: block"><span></span></div>
+</div>
+
+</body>
+</html>

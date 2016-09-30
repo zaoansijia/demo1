@@ -11,6 +11,7 @@
 
 </body>
 <script>
+    //方法一
     function getParameter(name) {
         var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
         var r = window.location.search.substr(1).match(reg);
@@ -21,5 +22,30 @@
     r.split('?');
     console.log(r.split('?'));
     console.log(name_type)
+    //方法二href hash跳转
+    $(document).ready(function() {
+        window.location.href='http://test.meilele.com/tuangou/?href=[dp-title]';
+        var url=location.href;
+        if( url.indexOf('href=[')!=-1 ) {
+            url = url.substr(url.indexOf('href=[')+6);
+            url = url.substr(0,url.indexOf(']'));
+            location.hash = url;
+        }
+    });
+    //方法三
+        function UrlParamHash(url) {
+            var params = [], h;
+            var hash = url.slice(url.indexOf("topic/") + 1).split('&');
+            for (var i = 0; i < hash.length; i++) {
+                h = hash[i].split("=");
+                params.push(h[0]);
+                params[h[0]] = h[1];
+            }
+            return params;
+        }
+    // 如下使用, b就是你的URL字符串
+        var params = UrlParamHash('http://test.meilele.com/preview_topic/20129-chuangpin.html#code=12345&href=JS_img_20#JS_img_20?qq-pf-to=pcqq.c2c'),
+            myHref = params['href'];
+        console.log(id)
 </script>
 </html>

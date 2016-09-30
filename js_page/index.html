@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js分页</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.js"></script>
+    <style>
+        #div{
+            text-align: center;
+        }
+        table {
+            border-collapse: collapse;
+            display: inline-block;
+        }
+        table tr td{
+            border:1px solid #333;
+            width:200px;
+            height: 50px;
+            text-align: center;
+
+        }
+        #page a{
+            width:50px;
+            height: 50px;
+            border:1px solid red;
+            display: inline-block;
+            margin-right: 5px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+       #page a:hover{
+            background-color: #00a8c6;
+            border:1px solid #ddd;
+        }
+        .current{
+            background-color: #00a8c6;
+        }
+    </style>
+</head>
+<body>
+<div id="div"><table></table></div>
+<div id="page">
+    <a class="page_head">上一页</a>
+    <div class="allpage">
+        <a class="pages current" data-page=""></a>
+        <a class="pages" data-page=""></a>
+        <a class="pages" data-page=""></a>
+        <a class="pages" data-page=""></a>
+        <a class="pages" data-page=""></a>
+        <a class="pages" data-page=""></a>
+        <a class="pages" data-page=""></a>
+        <a class="pages" data-page=""></a>
+        <a class="pages" data-page=""></a>
+        <a class="pages" data-page=""></a>
+    </div>
+    <a class="page_after">下一页</a>
+</div>
+<script>
+    (function($){
+        $.page=function(setting){
+            new $.page.prototype.init(setting);
+        }
+        $.page.defaults = {}
+        $.page.prototype = {
+            init: function(setting) {
+                this.setting = $.extend( {}, $.page.defaults, setting );
+                this.initData();
+                this.nowPage=1;
+            },
+            initData:function(){
+                var that=this;
+                $.getJSON('http://study.163.com/webDev/couresByCategory.htm?pageNo=1&psize=100&type=20',function(data){
+                    that.show(data.list);
+                },'json')
+            },
+            show:function(data){
+                var that=this,len=data.length;
+                this.showTable(1,data);
+                this.showPage();
+                $('.pages').each( function( index,item ){
+                    item.on( 'click' , function(){
+                        var pageNum = parseInt(item.getAttribute("data-page"));
+                        that.showTable( pageNum, data , function(){
+                            that.showPage();
+                        });
+                    });
+                })
+                $('.page_head').on( 'click' ,function(){
+                    that.showTable( that.nowPage-1 , data , function(){
+                        that.showPage();
+                    });
+                });
+                $('.page_after').on( 'click' ,function(){
+                    that.showTable( that.nowPage+1  , data , function(){
+                        that.showPage();
+                    });
+
+                });
+            },
+            showPage:function(){
+                var i='';
+                if( this.nowPage<=6 ){
+                    i=1;
+                }else if( this.nowPage>=16 ){
+                    i=11;
+                }else{
+                    i=this.nowPage-5;
+                }
+                for( var j=0;j<10;j++ ){
+                    $('.pages').eq(j).html(i);
+                    $('.pages').eq(j).attr('data-page',i);
+                    i++;
+                }
+            },
+            showTable:function( pageNum , data , callback ){
+                console.log(pageNum,'page');
+                console.log(data)
+                    this.nowPage=pageNum;
+                    var html='';
+                    for(var i=(pageNum-1)*5; i<pageNum*5; i++){
+                        html += '<tr>';
+                            html += '<td>'+data[i].name+'</td>';
+                            html += '<td>'+data[i].id+'</td>';
+                            html += '<td>'+data[i].provider+'</td>';
+                            html += '<td>'+data[i].targetUser+'</td>';
+                        html += '</tr>';
+                    };
+                    $('table').html('').html(html);
+                    if(callback)callback();
+                    $('.pages[data-page="'+this.nowPage+'"]').addClass('current').siblings().removeClass('current');
+            },
+        }
+        $.page.prototype.init.prototype = $.page.prototype;
+    })(jQuery)
+    $.page({});
+</script>
+</body>
+
+</html>
